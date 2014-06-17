@@ -513,7 +513,7 @@ This works like a web browser's back button."
   "Recursively finds files whose names match a Perl regular expression."
   (interactive "sPattern: ")
   (let* ((pattern (format "%s[^/]*$" pattern))
-	 (find-command (format "ack -a -l '.' | ack %s" pattern))
+	 (find-command (format "ack -l '.' | ack %s" pattern))
 	 (inhibit-read-only t))
     (erase-buffer)
     (call-process-shell-command find-command nil (current-buffer))

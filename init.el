@@ -1,3 +1,6 @@
+;; init-foo.el is package-specific configuration
+;; set-bar.el is more general config
+
 ;; ===========================================================================
 ;; helper functions
 ;; ===========================================================================
@@ -10,7 +13,7 @@
 ;; package management 
 ;; ===========================================================================
 
-(load (fullpath-relative-to-current-file "lisp/init-packages.el"))
+(load (fullpath-relative-to-current-file "lisp/set-packages.el"))
 
 (package-initialize)
                     
@@ -58,18 +61,14 @@
 ;; appearance  
 ;; ===========================================================================
 
-(load (fullpath-relative-to-current-file "lisp/init-appearance.el"))
+(load (fullpath-relative-to-current-file "lisp/set-appearance.el"))
 (load (fullpath-relative-to-current-file "lisp/init-whitespace.el"))
 
 ;; =========================================================================== 
 ;; text editing
 ;; ===========================================================================
-
-;; setup tab spacing
-;; (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
-;; (setq indent-line-function 'insert-tab)
-
+						
+(load (fullpath-relative-to-current-file "lisp/set-tabbing.el"))
 (load (fullpath-relative-to-current-file "lisp/init-evil.el"))
 (load (fullpath-relative-to-current-file "lisp/init-multiple-cursors.el"))
 (load (fullpath-relative-to-current-file "lisp/init-expand-region.el"))

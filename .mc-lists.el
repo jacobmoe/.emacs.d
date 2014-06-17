@@ -28,4 +28,5 @@
 
 (setq mc/cmds-to-run-once
       '(
+				evil-delete-backward-char-and-join
 				))
