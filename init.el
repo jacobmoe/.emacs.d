@@ -1,5 +1,5 @@
-;; init-foo.el is package-specific configuration
-;; set-bar.el is more general config
+;; init-foo.el - package-specific configuration
+;; set-bar.el - general config
 
 ;; ===========================================================================
 ;; helper functions
@@ -37,8 +37,12 @@
 ;; ===========================================================================
 
 ;; auto-completion for C-x C-f
-(require 'ido)
-(ido-mode t)
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
 
 ;; show column and line above mini-buffer
 (column-number-mode t)
@@ -50,7 +54,7 @@
 (global-linum-mode 1)
 
 ;; wrap text
-(global-visual-line-mode 1)
+;; (global-visual-line-mode 1)
 
 ;; set emacs shell PATH variable from system PATH
 (require 'exec-path-from-shell)
@@ -67,6 +71,14 @@
 ;; =========================================================================== 
 ;; text editing
 ;; ===========================================================================
+
+(projectile-global-mode)
+(global-set-key (kbd "C-c h") 'helm-projectile)
+
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
 						
 (load (fullpath-relative-to-current-file "lisp/set-tabbing.el"))
 (load (fullpath-relative-to-current-file "lisp/init-evil.el"))

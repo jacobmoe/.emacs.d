@@ -29,6 +29,10 @@
 		undo-tree
 		zenburn-theme
 		exec-path-from-shell
+    ack-and-a-half
+    flx-ido
+    helm
+    helm-projectile
 	))
 
 (require 'cl)
