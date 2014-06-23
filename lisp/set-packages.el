@@ -18,7 +18,6 @@
 		highlight-indentation
 		jade-mode
 		multiple-cursors
-		nav
 		popup
 		projectile
 		pkg-info
@@ -33,6 +32,10 @@
     flx-ido
     helm
     helm-projectile
+    ag
+    dirtree
+    tree-mode
+    windata
 	))
 
 (require 'cl)

@@ -11,5 +11,22 @@
 
 ;; major-mode specific indent levels
 (setq ruby-indent-level 2)
-(setq css-indent-offset 2)
-(setq js-indent-offset 2)
+(setq css-indent-level 2)
+(setq js-indent-level 2)
+
+;; use indent-level for evil-shift-width
+(add-hook 'ruby-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width ruby-indent-level))))
+
+(add-hook 'js-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width js-indent-level))))
+
+(add-hook 'jade-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width 2))))
+
+(add-hook 'haml-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width haml-indent-offset))))

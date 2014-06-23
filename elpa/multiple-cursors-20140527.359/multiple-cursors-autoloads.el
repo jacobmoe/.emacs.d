@@ -4,8 +4,8 @@
 
 
 ;;;### (autoloads (mc/edit-beginnings-of-lines mc/edit-ends-of-lines
-;;;;;;  mc/edit-lines) "mc-edit-lines" "mc-edit-lines.el" (21406
-;;;;;;  5138 0 0))
+;;;;;;  mc/edit-lines) "mc-edit-lines" "mc-edit-lines.el" (21415
+;;;;;;  34946 0 0))
 ;;; Generated autoloads from mc-edit-lines.el
 
 (autoload 'mc/edit-lines "mc-edit-lines" "\
@@ -44,7 +44,7 @@ Add one cursor to the beginning of each line in the active region.
 ;;;;;;  mc/mark-previous-word-like-this mc/mark-previous-like-this
 ;;;;;;  mc/mark-next-symbol-like-this mc/mark-next-word-like-this
 ;;;;;;  mc/mark-next-like-this) "mc-mark-more" "mc-mark-more.el"
-;;;;;;  (21406 5138 0 0))
+;;;;;;  (21415 34946 0 0))
 ;;; Generated autoloads from mc-mark-more.el
 
 (autoload 'mc/mark-next-like-this "mc-mark-more" "\
@@ -204,8 +204,8 @@ Mark the tag we're in and its pair for renaming.
 
 ;;;***
 
-;;;### (autoloads (mc/mark-pop) "mc-mark-pop" "mc-mark-pop.el" (21406
-;;;;;;  5138 0 0))
+;;;### (autoloads (mc/mark-pop) "mc-mark-pop" "mc-mark-pop.el" (21415
+;;;;;;  34946 0 0))
 ;;; Generated autoloads from mc-mark-pop.el
 
 (autoload 'mc/mark-pop "mc-mark-pop" "\
@@ -217,8 +217,8 @@ to the popped mark.
 ;;;***
 
 ;;;### (autoloads (mc/sort-regions mc/reverse-regions mc/insert-numbers)
-;;;;;;  "mc-separate-operations" "mc-separate-operations.el" (21406
-;;;;;;  5138 0 0))
+;;;;;;  "mc-separate-operations" "mc-separate-operations.el" (21415
+;;;;;;  34946 0 0))
 ;;; Generated autoloads from mc-separate-operations.el
 
 (autoload 'mc/insert-numbers "mc-separate-operations" "\
@@ -239,7 +239,7 @@ Insert increasing numbers for each cursor, starting at 0 or ARG.
 ;;;***
 
 ;;;### (autoloads (set-rectangular-region-anchor) "rectangular-region-mode"
-;;;;;;  "rectangular-region-mode.el" (21406 5138 0 0))
+;;;;;;  "rectangular-region-mode.el" (21415 34945 0 0))
 ;;; Generated autoloads from rectangular-region-mode.el
 
 (autoload 'set-rectangular-region-anchor "rectangular-region-mode" "\
@@ -253,8 +253,8 @@ an exceedingly quick way of adding multiple cursors to multiple lines.
 ;;;***
 
 ;;;### (autoloads nil nil ("mc-cycle-cursors.el" "multiple-cursors-core.el"
-;;;;;;  "multiple-cursors-pkg.el" "multiple-cursors.el") (21406 5138
-;;;;;;  468948 0))
+;;;;;;  "multiple-cursors-pkg.el" "multiple-cursors.el") (21415 34946
+;;;;;;  216560 0))
 
 ;;;***
 

@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads (sws-mode) "sws-mode" "sws-mode.el" (21406 5136
+;;;### (autoloads (sws-mode) "sws-mode" "sws-mode.el" (21415 34943
 ;;;;;;  0 0))
 ;;; Generated autoloads from sws-mode.el
 
@@ -14,7 +14,7 @@ Major mode for editing significant whitespace files
 
 ;;;***
 
-;;;### (autoloads nil nil ("sws-mode-pkg.el") (21406 5136 187251
+;;;### (autoloads nil nil ("sws-mode-pkg.el") (21415 34943 983884
 ;;;;;;  0))
 
 ;;;***

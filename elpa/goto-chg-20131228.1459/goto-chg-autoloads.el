@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (goto-last-change-reverse goto-last-change) "goto-chg"
-;;;;;;  "goto-chg.el" (21406 5100 0 0))
+;;;;;;  "goto-chg.el" (21415 34911 0 0))
 ;;; Generated autoloads from goto-chg.el
 
 (autoload 'goto-last-change "goto-chg" "\
@@ -42,7 +42,7 @@ See `goto-last-change' for use of prefix argument.
 
 ;;;***
 
-;;;### (autoloads nil nil ("goto-chg-pkg.el") (21406 5100 826005
+;;;### (autoloads nil nil ("goto-chg-pkg.el") (21415 34911 189272
 ;;;;;;  0))
 
 ;;;***

@@ -3,7 +3,7 @@
 ;;; Code:
 
 
-;;;### (autoloads (flx-ido-mode) "flx-ido" "flx-ido.el" (21408 45616
+;;;### (autoloads (flx-ido-mode) "flx-ido" "flx-ido.el" (21415 34964
 ;;;;;;  0 0))
 ;;; Generated autoloads from flx-ido.el
 
@@ -20,7 +20,7 @@ Toggle flx ido mode
 
 ;;;***
 
-;;;### (autoloads nil nil ("flx-ido-pkg.el") (21408 45616 875348
+;;;### (autoloads nil nil ("flx-ido-pkg.el") (21415 34964 506135
 ;;;;;;  0))
 
 ;;;***

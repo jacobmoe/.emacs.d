@@ -1,5 +1,17 @@
+;; ===========================================================================
+;; notes 
+;; ===========================================================================
 ;; init-foo.el - package-specific configuration
 ;; set-bar.el - general config
+
+;; dirtree tree-widget-themes are here:
+;; /usr/local/Cellar/emacs/24.3/share/emacs/24.3/etc/images/tree-widget
+;; renamed default folder to use the plain ascii theme
+;; can add new themes by adding images to a new folder
+;; replace "folder" with new theme in dirtree.el:
+;; (define-derived-mode dirtree-mode tree-mode "Dir-Tree"
+;;  "A mode to display tree of directory"
+;;  (tree-widget-set-theme "folder"))
 
 ;; ===========================================================================
 ;; helper functions
@@ -53,6 +65,9 @@
 ;; show line numbers
 (global-linum-mode 1)
 
+;; highlight current line
+(global-hl-line-mode 1)
+
 ;; wrap text
 ;; (global-visual-line-mode 1)
 
@@ -60,6 +75,9 @@
 (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;; dirtree
+(require 'dirtree)
 
 ;; ===========================================================================
 ;; appearance  

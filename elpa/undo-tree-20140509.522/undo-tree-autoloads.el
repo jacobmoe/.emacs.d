@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (global-undo-tree-mode undo-tree-mode) "undo-tree"
-;;;;;;  "undo-tree.el" (21406 5102 0 0))
+;;;;;;  "undo-tree.el" (21415 34912 0 0))
 ;;; Generated autoloads from undo-tree.el
 
 (autoload 'undo-tree-mode "undo-tree" "\
@@ -50,7 +50,7 @@ See `undo-tree-mode' for more information on Undo-Tree mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("undo-tree-pkg.el") (21406 5102 334280
+;;;### (autoloads nil nil ("undo-tree-pkg.el") (21415 34912 429111
 ;;;;;;  0))
 
 ;;;***
