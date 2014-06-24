@@ -1,11 +1,10 @@
 ;; -- color themes -----------------------------------------------------------
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/solarized")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/tomorrow")
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/solarized")
 
 ;; (load-theme 'solarized-dark t)
-;; (load-theme 'tomorrow-night-blue t)
-(load-theme 'zenburn t)
+(load-theme 'sanityinc-tomorrow-night t)
+;; (load-theme 'zenburn t)
 
 ;; -- typeface ---------------------------------------------------------------
 
@@ -38,3 +37,4 @@
 
 ;; set colors for ansi-term (should be fixed in 24.2 eventually)
 (setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f" "#f0dfaf" "#8cd0d3" "#dc8cc3" "#93e0e3" "#dcdccc"])
+ 

@@ -1,1 +1,1 @@
-("~/.emacs.d/" "/usr/local/" "~/code/node/go_game/" "~/code/node/node-express-mongoose-demo/" "~/code/twg/organics-live/" "~/code/node/examples/modular/")
+("~/.emacs.d/" "~/code/twg/organics-live/" "/usr/local/" "~/code/node/go_game/" "~/code/node/node-express-mongoose-demo/" "~/code/node/examples/modular/")
