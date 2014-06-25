@@ -34,7 +34,4 @@
        (set-frame-parameter nil 'alpha '(100 100))
      (set-frame-parameter nil 'alpha '(99 95))))
  (global-set-key (kbd "C-c t") 'toggle-transparency)
-
-;; set colors for ansi-term (should be fixed in 24.2 eventually)
-(setq ansi-term-color-vector [unspecified "#3f3f3f" "#cc9393" "#7f9f7f" "#f0dfaf" "#8cd0d3" "#dc8cc3" "#93e0e3" "#dcdccc"])
  
