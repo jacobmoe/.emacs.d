@@ -61,6 +61,11 @@
 ;; load modes and set defaults 
 ;; ===========================================================================
 
+;; column beyond which automatic line-wrapping should happen
+;; used by fill-column-indicator (fci-mode)
+;; default is 70
+(setq-default fill-column 80)
+
 ;; auto-completion for C-x C-f
 (require 'flx-ido)
 (ido-mode 1)

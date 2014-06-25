@@ -37,6 +37,7 @@
     dirtree
     tree-mode
     windata
+    fill-column-indicator
 	))
 
 (require 'cl)
