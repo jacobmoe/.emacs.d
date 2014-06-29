@@ -24,20 +24,22 @@
 		s
 		sws-mode
 		undo-tree
+    color-theme
 		zenburn-theme
     color-theme-sanityinc-tomorrow 
     color-theme-solarized 
-    color-theme
 		exec-path-from-shell
     ack-and-a-half
     flx-ido
     helm
     helm-projectile
     ag
-    dirtree
-    tree-mode
-    windata
     fill-column-indicator
+    dired-details ;; can be removed in 24.4
+    dired-details+ ;; remove in 24.4
+    dired-subtree 
+    dirtree
+    elscreen
 	))
 
 (require 'cl)
@@ -58,3 +60,4 @@
   (dolist (p required-packages)
     (when (not (package-installed-p p))
       (package-install p))))
+

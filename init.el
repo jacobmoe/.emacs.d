@@ -5,11 +5,11 @@
 ;; set-bar.el - general config
 
 ;; dirtree tree-widget-themes are here:
-;; /usr/local/Cellar/emacs/24.3/share/emacs/24.3/etc/images/tree-widget
+;; /usrlocal/Cellar/emacs/24.3/share/emacs/24.3/etc/images/tree-widget
 ;; renamed default folder to use the plain ascii theme
 ;; can add new themes by adding images to a new folder
 ;; replace "folder" with new theme in dirtree.el:
-;; (define-derived-mode dirtree-mode tree-mode "Dir-Tree"
+;; (define-derived-mode dirtree-mode tree-mode "Dir-Tree" 
 ;;  "A mode to display tree of directory"
 ;;  (tree-widget-set-theme "folder"))
 
@@ -58,7 +58,7 @@
   (setq initial-buffer-choice "~/notes"))
 
 ;; ===========================================================================
-;; load modes and set defaults 
+;; load basic modes and set defaults 
 ;; ===========================================================================
 
 ;; column beyond which automatic line-wrapping should happen
@@ -74,18 +74,6 @@
 ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
 
-;; show column and line above mini-buffer
-(column-number-mode t)
-
- ;; remove tool-bar from GUI
-(tool-bar-mode -1)
-
-;; show line numbers
-(global-linum-mode 1)
-
-;; highlight current line
-(global-hl-line-mode 1)
-
 ;; wrap text
 ;; (global-visual-line-mode 1)
 
@@ -94,18 +82,21 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;; dirtree
-(require 'dirtree)
+;; *** THIS WILL BE THE DEFAULT IN 24.4 ***********************************
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
 
 ;; ===========================================================================
 ;; appearance  
 ;; ===========================================================================
 
+;; includes window and buffer defaults, color themes, typeface, etc...
 (load (fullpath-relative-to-current-file "lisp/set-appearance.el"))
+
 (load (fullpath-relative-to-current-file "lisp/init-whitespace.el"))
 
-;; =========================================================================== 
-;; text editing
+;; ===========================================================================
+;; file/directory/buffer navigation
 ;; ===========================================================================
 
 (projectile-global-mode)
@@ -115,7 +106,34 @@
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
-						
+
+;; use elscreen for window tabs
+;; evil-mode elscreen bindings in init-evil.el
+(load "elscreen" "ElScreen" t)
+
+;; default elscreen-prefix-key is "C-z"
+;; conflicts with evil toggle emacs mode
+(elscreen-set-prefix-key (kbd "C-c z"))
+
+(require 'dirtree)
+
+(add-to-list 'load-path (fullpath-relative-to-current-file "packages/neotree"))
+(require 'neotree)
+(global-set-key (kbd "C-x z") 'neotree-toggle)
+(global-set-key (kbd "C-x C-z") 'neotree-dir)
+
+;; *** THIS CAN BE REMOVED IN 24.4. REPLACED BY dired-hide-details-mode ***
+(require 'dired-details+)
+
+;; so dired plays nice with evil
+(define-key dired-mode-map "t" 'elscreen-next)
+(define-key dired-mode-map "T" 'elscreen-previous)
+(define-key dired-mode-map "h" nil)
+
+;; =========================================================================== 
+;; text editing
+;; ===========================================================================
+
 (load (fullpath-relative-to-current-file "lisp/set-tabbing.el"))
 (load (fullpath-relative-to-current-file "lisp/init-evil.el"))
 (load (fullpath-relative-to-current-file "lisp/init-multiple-cursors.el"))
