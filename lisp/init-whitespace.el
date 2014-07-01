@@ -1,5 +1,6 @@
 ;; make whitespace-mode use just basic coloring
-;;(setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
+
+;; (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 (setq whitespace-display-mappings
   ;; all numbers are Unicode codepoint in decimal. ⁖ (insert-char 182 1)
   '(

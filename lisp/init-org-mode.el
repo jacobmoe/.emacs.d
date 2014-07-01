@@ -1,3 +1,5 @@
+(add-hook 'org-mode-hook (lambda () (visual-line-mode 1)))
+
 ;; syntax highlight code blocks
 (setq org-src-fontify-natively t)
 

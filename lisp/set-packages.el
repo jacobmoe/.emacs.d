@@ -1,4 +1,5 @@
 (require 'package)
+(package-initialize)
 
 ;; add package archives, in addition to gnu - http://elpa.gnu.org/packages/
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)

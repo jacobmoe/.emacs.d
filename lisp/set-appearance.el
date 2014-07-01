@@ -1,23 +1,4 @@
 ;; ===========================================================================
-;; window and buffer defaults
-;; ===========================================================================
-
-;; show column and line above mini-buffer
-(column-number-mode t)
-
- ;; remove tool-bar from GUI
-(tool-bar-mode -1)
-
-;; show line numbers
-(global-linum-mode 1)
-
-;; highlight current line
-(global-hl-line-mode 1)
-
-;; default window size
-(setq default-frame-alist '((width . 88) (height . 49)))
-
-;; ===========================================================================
 ;; color themes
 ;; ===========================================================================
 
