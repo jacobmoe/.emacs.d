@@ -2,11 +2,12 @@
 ;; color themes
 ;; ===========================================================================
 
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/solarized")
+(add-to-list 'load-path "~/.emacs.d/packages/color-theme-sanityinc-tomorrow/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/packages/color-theme-sanityinc-tomorrow/")
 
 ;; (load-theme 'solarized-dark t)
-(load-theme 'sanityinc-tomorrow-night t)
-;; (load-theme 'zenburn t)
+;; (load-theme 'sanityinc-tomorrow-night t)
+(load-theme 'zenburn t)
 
 ;; ===========================================================================
 ;; typeface

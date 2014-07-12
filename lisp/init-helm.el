@@ -1,8 +1,9 @@
 (require 'helm)
 (require 'helm-config)
 (require 'helm-files)
-(require 'wgrep-helm)
+(require 'helm-grep)
 
+(global-set-key (kbd "C-c h p") 'helm-projectile) ;; same as C-c p h
 (global-set-key (kbd "C-c h k") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h b") 'helm-mini) ;; open buffers
 (global-set-key (kbd "C-c h o") 'helm-occur)
@@ -13,5 +14,6 @@
 
 ; do not show these files in helm buffer
 (setq helm-boring-file-regexp-list '("\\.git$" "\\.hg$"))
+
 (setq helm-buffers-fuzzy-matching t)
 

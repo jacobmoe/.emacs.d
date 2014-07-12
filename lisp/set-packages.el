@@ -25,9 +25,9 @@
 		s
 		sws-mode
 		undo-tree
-    color-theme
 		zenburn-theme
-    color-theme-sanityinc-tomorrow 
+    color-theme
+    ;; color-theme-sanityinc-tomorrow 
     color-theme-solarized 
 		exec-path-from-shell
     ack-and-a-half

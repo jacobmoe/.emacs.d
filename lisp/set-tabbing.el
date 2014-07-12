@@ -1,3 +1,7 @@
+;; set C-tab to tab with quoted-insert
+;; unsetting local binding for this in init-org-mode.el
+(global-set-key (kbd "<C-tab>") 'tab-to-tab-stop)
+           
 ;; use spaces, not tabs
 (setq-default indent-tabs-mode nil)
 										

@@ -1,3 +1,8 @@
+;; unset C-tab to use tab-to-tab-stop (set in set-tabbing.el)
+;; default is org-force-cycle-archived
+(add-hook 'org-mode-hook (lambda () (local-unset-key (kbd "<C-tab>"))))
+
+;; set visual line mode 
 (add-hook 'org-mode-hook (lambda () (visual-line-mode 1)))
 
 ;; syntax highlight code blocks
