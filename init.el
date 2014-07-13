@@ -75,6 +75,9 @@
 ;; default window size
 (setq default-frame-alist '((width . 88) (height . 49)))
 
+;; highlight parens
+(show-paren-mode t)
+
 ;; column beyond which automatic line-wrapping should happen
 ;; used by fill-column-indicator (fci-mode)
 ;; default is 70
@@ -185,3 +188,8 @@
 
 (load (fullpath-relative-to-current-file "lisp/init-org-mode.el"))
 
+;; ===========================================================================
+;; languages and frameworks
+;; ===========================================================================
+
+(load (fullpath-relative-to-current-file "lisp/set-ruby.el"))

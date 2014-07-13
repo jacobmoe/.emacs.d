@@ -1,3 +1,5 @@
+;; inspect "package-activated-list" variable for all currenctly activated packages
+
 (require 'package)
 (package-initialize)
 
@@ -41,6 +43,8 @@
     dired-subtree 
     dirtree
     elscreen
+    ess
+    sass-mode
 	))
 
 (require 'cl)
