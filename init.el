@@ -34,10 +34,8 @@
 
 ;; stop leaving file~ all over the place. put file backups in one directory
 ;;  same for auto-save files (#filename#)
-;; (setq backup-directory-alist `(("." . "~/.emacs.d/file_backups")))
-;; (setq auto-save-file-name-transforms `((".*" ,"~/.emacs.d/file_backups" t)))
-(defvar backup-dir (expand-file-name "~/.emacs.d/backup/"))
-(defvar autosave-dir (expand-file-name "~/.emacs.d/autosave/"))
+(defvar backup-dir (expand-file-name "~/.emacs.d/backups/"))
+(defvar autosave-dir (expand-file-name "~/.emacs.d/autosaves/"))
 (setq backup-directory-alist (list (cons ".*" backup-dir)))
 (setq auto-save-list-file-prefix autosave-dir)
 (setq auto-save-file-name-transforms `((".*" ,autosave-dir t)))
@@ -71,10 +69,8 @@
 
 (load (fullpath-relative-to-current-file "lisp/set-buffers.el"))
 (load (fullpath-relative-to-current-file "lisp/set-file-nav.el"))
-
 (load (fullpath-relative-to-current-file "lisp/init-projectile.el"))
 (load (fullpath-relative-to-current-file "lisp/init-helm.el"))
-
 (load (fullpath-relative-to-current-file "lisp/init-dired.el"))
 
 ;; ===========================================================================
