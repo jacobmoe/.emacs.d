@@ -7,7 +7,10 @@
 
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'sanityinc-tomorrow-night t)
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+;; (load-theme 'monokai t)
+;; (load-theme 'tangotango t)
+(load-theme 'flatland t)
 
 ;; ===========================================================================
 ;; typeface

@@ -9,29 +9,35 @@
 (package-initialize)
 
 (defvar required-packages
-	'(
-		auto-complete
-		evil
-		expand-region
-		go-mode
-		goto-chg
-		haml-mode
-		highlight-indentation
-		jade-mode
-		multiple-cursors
-		popup
-		projectile
-		pkg-info
-		epl
-		dash
-		s
-		sws-mode
-		undo-tree
-		zenburn-theme
+  '(
+    auto-complete
+    evil
+    expand-region
+    go-mode
+    goto-chg
+    haml-mode
+    highlight-indentation
+    jade-mode
+    multiple-cursors
+    popup
+    projectile
+    pkg-info
+    epl
+    dash
+    s
+    sws-mode
+    undo-tree
+
+    ;; == color themes ==================
+    zenburn-theme
     color-theme
     ;; color-theme-sanityinc-tomorrow 
     color-theme-solarized 
-		exec-path-from-shell
+    monokai-theme
+    tangotango-theme
+    flatland-theme
+
+    exec-path-from-shell
     ack-and-a-half
     flx-ido
     helm
@@ -45,7 +51,8 @@
     elscreen
     ess
     sass-mode
-	))
+    stylus-mode
+  ))
 
 (require 'cl)
 

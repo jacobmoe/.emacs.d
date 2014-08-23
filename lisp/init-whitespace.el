@@ -9,4 +9,4 @@
     (tab-mark 9 [9655 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
     ))
 
-(set-face-attribute 'whitespace-space nil :background nil :foreground "gray30")
+;; (set-face-attribute 'whitespace-space nil :background nil :foreground "gray30")

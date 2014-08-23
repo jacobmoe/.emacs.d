@@ -1,4 +1,5 @@
-file_backups
+backups
+autosaves
 elpa
 auto-save-list
 .DS_Store
