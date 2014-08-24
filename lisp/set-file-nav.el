@@ -1,4 +1,4 @@
-;; better fuzzy matching for ido
+; better fuzzy matching for ido
 (require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)
@@ -18,7 +18,7 @@
 ;; ideal would be to have one based on dired
 ;; might be able to do that using dired-subtree while hiding details
 
-(load (fullpath-relative-to-current-file "init-speedbar.el"))
+(load (expand-relative-path "init-speedbar.el"))
 (require 'graphene-speedbar)
 
 (require 'dirtree)
@@ -32,8 +32,11 @@
 ;;  "A mode to display tree of directory"
 ;;  (tree-widget-set-theme "folder"))
 
-(add-to-list 'load-path (fullpath-relative-to-current-file "../packages/neotree"))
+(add-to-list 'load-path (expand-relative-path "../packages/neotree"))
 (require 'neotree)
 (setq neo-window-width 35)
 (global-set-key (kbd "C-x z") 'neotree-toggle)
 (global-set-key (kbd "C-x C-z") 'neotree-dir)
+
+
+(provide 'set-file-nav)

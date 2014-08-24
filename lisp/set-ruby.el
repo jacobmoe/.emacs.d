@@ -8,3 +8,5 @@
 ;; turn off really annoying tabbing behavior 
 ;; can remove in 24.4, maybe
 (setq ruby-deep-indent-paren nil) 
+
+(provide 'set-ruby)

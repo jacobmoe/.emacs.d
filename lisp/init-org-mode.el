@@ -31,3 +31,5 @@
 			 "~/notes/daily.org"
 			 "~/notes/general_notes.org"))
 (setq org-mobile-inbox-for-pull "~/notes/inbox.org")
+
+(provide 'init-org-mode)

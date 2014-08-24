@@ -17,3 +17,4 @@
 
 (setq helm-buffers-fuzzy-matching t)
 
+(provide 'init-helm)

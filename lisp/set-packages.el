@@ -73,3 +73,4 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
+(provide 'set-packages)

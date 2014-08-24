@@ -1,7 +1,5 @@
 (evil-mode 1)
 
-(add-to-list 'evil-emacs-state-modes 'nav-mode)
-
 ;;(define-key evil-normal-state-map (kbd "C-w t") 'elscreen-create) ;create tab
 ;;(define-key evil-normal-state-map (kbd "C-w x") 'elscreen-kill) ;kill tab
 (define-key evil-normal-state-map "gT" 'elscreen-previous) ;previous tab
@@ -21,3 +19,7 @@
       (set-face-background 'mode-line (car color))
       (set-face-foreground 'mode-line (cdr color))))))
 
+;; http://stackoverflow.com/questions/23798021/disabling-evil-mode-for-nav-in-emacs-or-any-read-only-buffers
+(add-to-list 'evil-emacs-state-modes 'nav-mode)
+
+(provide 'init-evil)

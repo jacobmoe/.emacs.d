@@ -1,5 +1,6 @@
-;; fix use of relative paths - http://ergoemacs.org/emacs/elisp_relative_path.html
-(defun fullpath-relative-to-current-file (file-relative-path)
+;; fullpath-relative-to-current-file
+;; http://ergoemacs.org/emacs/elisp_relative_path.html
+(defun expand-relative-path (file-relative-path)
 	(concat (file-name-directory 
     (or load-file-name buffer-file-name)) file-relative-path))
 
@@ -15,4 +16,4 @@
         (revert-buffer t t t) )))
   (message "Refreshed open files."))
 
-(provide 'helper-functions)
+(provide 'set-defuns)

@@ -18,3 +18,5 @@
 (define-key dired-mode-map "h" nil)
 (define-key dired-mode-map "t" 'elscreen-next) ;; "gt" in evil
 (define-key dired-mode-map "T" 'elscreen-previous) ;; "gT" in evil
+
+(provide 'init-dired)
