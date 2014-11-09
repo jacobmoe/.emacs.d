@@ -80,6 +80,8 @@
 ;; text editing
 ;; ===========================================================================
 
+(electric-indent-mode -1)
+
 ;; wrap text
 ;; (global-visual-line-mode 1)
 
@@ -109,7 +111,6 @@
 ;; languages and frameworks
 ;; ===========================================================================
 
-;; R-mode
-(require `ess-site)
-
+(require 'ess-site) ;; comes with R-mode
 (require 'set-ruby)
+(require 'set-javascript)

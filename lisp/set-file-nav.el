@@ -18,8 +18,8 @@
 ;; ideal would be to have one based on dired
 ;; might be able to do that using dired-subtree while hiding details
 
-(load (expand-relative-path "init-speedbar.el"))
-(require 'graphene-speedbar)
+;; (load (expand-relative-path "init-speedbar.el"))
+;; (require 'graphene-speedbar)
 
 (require 'dirtree)
 

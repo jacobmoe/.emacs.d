@@ -17,7 +17,6 @@
     goto-chg
     haml-mode
     highlight-indentation
-    jade-mode
     multiple-cursors
     popup
     projectile
@@ -52,6 +51,8 @@
     ess
     sass-mode
     stylus-mode
+    jade-mode
+    js2-mode
   ))
 
 (require 'cl)

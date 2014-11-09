@@ -2,11 +2,14 @@ backups
 autosaves
 elpa
 auto-save-list
+games
+bookmarks
 .DS_Store
 .org-id-locations
 *~
 .mc-lists.el
 projectile-bookmarks.eld
+projectile.cache
 ac-comphist.dat
 custom.el
-projectile.cache
+

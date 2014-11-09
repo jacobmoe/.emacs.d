@@ -35,4 +35,8 @@
   (function (lambda ()
     (setq evil-shift-width haml-indent-offset))))
 
+(add-hook 'go-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width go-indent-offset))))
+
 (provide 'set-tabbing)

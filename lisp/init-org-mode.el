@@ -12,12 +12,16 @@
 (setq org-todo-keywords
            '((sequence "TODO(t)" "|" "DONE(d)")
              (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
-             (sequence "|" "CANCELED(c)" "STARTED(s)" "NOTE(n)" "QUESTION(q)")))
+             (sequence "RUN(r)" "GYM(g)")
+             (sequence "|" "CANCELED(c)" "STARTED(s)" "NOTE(n)"  "QUESTION(q)")))
+
 (setq org-todo-keyword-faces
 			'(("TODO" . org-warning) 
 				("NOTE" . (:background "orange" :foreground "black"))
 				("CANCELED" . (:foreground "blue" :weight bold))
 				("STARTED" . (:foreground "green"))
+				("RUN" . (:foreground "yellow"))
+				("GYM" . (:foreground "yellow"))
 				("QUESTION" . (:foreground "purple"))))
 
 ;; Org-mode file-directory
@@ -27,9 +31,31 @@
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 (setq org-agenda-files '("~/notes/test.org"))
 (setq org-mobile-files '(
-			 "~/notes/twg/demos.org"
-			 "~/notes/daily.org"
-			 "~/notes/general_notes.org"))
+       (concat org-directory "/twg/demos.org")
+       (concat org-directory "/daily.org")
+       (concat org-directory "/general_notes.org")))
 (setq org-mobile-inbox-for-pull "~/notes/inbox.org")
+
+;; org-capture
+(setq org-default-notes-file (concat org-directory "/gtd/notes.org"))
+(global-set-key (kbd "C-c r") 'org-capture)
+
+(setq org-capture-templates
+    '(("t" "Todo" entry (file+headline (concat org-directory "/gtd/notes.org") "Tasks")
+        "* TODO %?\n%u %i\n")
+      ("m" "Music" entry (file+headline (concat org-directory "/gtd/notes.org") "Music")
+        "* TODO %?\n %i\n")
+      ("M" "Movie" entry (file+headline (concat org-directory "/gtd/notes.org") "Movies")
+        "* TODO %?\n %i\n")
+      ("L" "Learn" entry (file+headline (concat org-directory "/gtd/notes.org") "Learn")
+        "* TODO %?\n %i\n")
+      ("f" "Fear" entry (file+headline (concat org-directory "/gtd/notes.org") "Fear")
+        "* %u\n %? %i\n")
+      ("l" "Link" entry (file+headline (concat org-directory "/gtd/notes.org") "Links")
+        "* %? \n%i\n")
+      ("i" "Idea" entry (file+headline (concat org-directory "/gtd/notes.org") "Ideas")
+        "* %? \n%i\n")
+      ("b" "Book" entry (file+headline (concat org-directory "/gtd/notes.org") "Books")
+        "* TODO %?\n %i\n")))
 
 (provide 'init-org-mode)
