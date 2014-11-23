@@ -1,10 +1,14 @@
-;; show column and line above mini-buffer
+;; show column and line in the mode-line
 (column-number-mode t)
 
 ;; remove tool-bar from GUI
 (tool-bar-mode -1)
 
-;; show line numbers
+;; remove menu-bar form GUI unless we're on OS X
+;; the GUI on linux takes up space in the frame. 
+(unless (eq system-type 'darwin) (menu-bar-mode -1))
+
+;; show line numbers. seems to cause problems in the terminal
 (global-linum-mode 1)
 
 ;; highlight current line

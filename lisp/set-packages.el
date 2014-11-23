@@ -46,7 +46,7 @@
     dired-details ;; can be removed in 24.4
     dired-details+ ;; remove in 24.4
     dired-subtree 
-    dirtree
+    neotree
     elscreen
     ess
     sass-mode
