@@ -26,6 +26,8 @@
     s
     sws-mode
     undo-tree
+    magit
+    restclient
 
     ;; == color themes ==================
     zenburn-theme

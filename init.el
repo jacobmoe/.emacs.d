@@ -46,7 +46,8 @@
 ;; - basic defaults like tool-bar-mode, linum-mode, etc 
 ;; - key bindings for resizing a window
 (require 'set-window-and-frame)
-(require 'init-elscreen)
+
+;; (require 'init-elscreen)
 
 ;; ===========================================================================
 ;; buffers, files and directories
@@ -97,6 +98,12 @@
 (require 'init-evil)
 (require 'init-multiple-cursors)
 (require 'init-expand-region)
+
+;; ===========================================================================
+;; version control
+;; ===========================================================================
+
+(require 'init-magit)
 
 ;; ===========================================================================
 ;; org-mode 

@@ -7,8 +7,8 @@
 (setq ido-use-faces nil)
 
 ;; *** THIS WILL BE THE DEFAULT IN 24.4 ***
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
+;; (require 'uniquify)
+;; (setq uniquify-buffer-name-style 'forward)
 
 
 ;; **NOTE** trying a bunch of tree-navs. 
