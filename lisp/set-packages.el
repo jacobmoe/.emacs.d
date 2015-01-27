@@ -57,6 +57,8 @@
     js2-mode
     smartparens
     evil-leader
+    diminish
+    key-chord
   ))
 
 (require 'cl)

@@ -43,12 +43,11 @@
 ;; window and frame
 ;; ===========================================================================
 
-;; hide scroll bars
-(scroll-bar-mode -1)
-
 ;; - basic defaults like tool-bar-mode, linum-mode, etc
 ;; - key bindings for resizing a window
 (require 'set-window-and-frame)
+
+(require 'set-modeline)
 
 ;; (require 'init-elscreen)
 
@@ -86,6 +85,13 @@
 
 (electric-indent-mode -1)
 
+;; highlight parens
+(show-paren-mode t)
+
+;; start key-chord-mode
+;; used in init-evil
+(key-chord-mode 1)
+
 ;; wrap text
 ;; (global-visual-line-mode 1)
 
@@ -95,8 +101,7 @@
 ;; - language mode hooks. should also move this to langs and frameworks
 (require 'set-tabbing)
 
-(require 'init-evil-leader)
-
+;; - configure evil-leader
 ;; - key-bindings for elscreen movement
 ;; - set mode-line color by evil state, and when buffer is dirty
 ;; - disable evil for some modes

@@ -1,3 +1,18 @@
+;; ==== evil-leader package ==========
+;; set "leader key"
+
+(global-evil-leader-mode)
+(setq evil-leader/in-all-states 1)
+
+(evil-leader/set-leader ",")
+
+(evil-leader/set-key
+  "e" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-buffer)
+
+;; ==== evil-mode =====================
+
 (evil-mode 1)
 
 ;; when long lines are wrapped, j/k navigation jumps the entire
@@ -26,5 +41,8 @@
 
 ;; http://stackoverflow.com/questions/23798021/disabling-evil-mode-for-nav-in-emacs-or-any-read-only-buffers
 (add-to-list 'evil-emacs-state-modes 'nav-mode)
+
+;; key-chords
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 
 (provide 'init-evil)
