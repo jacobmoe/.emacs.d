@@ -32,8 +32,8 @@
     ;; == color themes ==================
     zenburn-theme
     color-theme
-    ;; color-theme-sanityinc-tomorrow 
-    color-theme-solarized 
+    ;; color-theme-sanityinc-tomorrow
+    color-theme-solarized
     monokai-theme
     tangotango-theme
     flatland-theme
@@ -47,7 +47,7 @@
     fill-column-indicator
     dired-details ;; can be removed in 24.4
     dired-details+ ;; remove in 24.4
-    dired-subtree 
+    dired-subtree
     neotree
     elscreen
     ess
@@ -55,6 +55,8 @@
     stylus-mode
     jade-mode
     js2-mode
+    smartparens
+    evil-leader
   ))
 
 (require 'cl)

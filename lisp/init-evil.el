@@ -1,5 +1,10 @@
 (evil-mode 1)
 
+;; when long lines are wrapped, j/k navigation jumps the entire
+;; "real" line instead of the visual line. don't do that.
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
 ;;(define-key evil-normal-state-map (kbd "C-w t") 'elscreen-create) ;create tab
 ;;(define-key evil-normal-state-map (kbd "C-w x") 'elscreen-kill) ;kill tab
 (define-key evil-normal-state-map "gT" 'elscreen-previous) ;previous tab

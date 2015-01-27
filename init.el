@@ -11,7 +11,7 @@
 (require 'set-defuns)
 
 ;; ===========================================================================
-;; package management 
+;; package management
 ;; ===========================================================================
 
 ;; - define required packages list
@@ -19,7 +19,7 @@
 (require 'set-packages)
 
 ;; ===========================================================================
-;; special files & dirs 
+;; special files & dirs
 ;; ===========================================================================
 
 ;; - define backup-dir and autosave-dir
@@ -29,7 +29,7 @@
 (require 'set-special-files-dirs)
 
 ;; ===========================================================================
-;; appearance  
+;; appearance
 ;; ===========================================================================
 
 ;; - color themes and typeface
@@ -43,7 +43,10 @@
 ;; window and frame
 ;; ===========================================================================
 
-;; - basic defaults like tool-bar-mode, linum-mode, etc 
+;; hide scroll bars
+(scroll-bar-mode -1)
+
+;; - basic defaults like tool-bar-mode, linum-mode, etc
 ;; - key bindings for resizing a window
 (require 'set-window-and-frame)
 
@@ -53,7 +56,7 @@
 ;; buffers, files and directories
 ;; ===========================================================================
 
-;; - key-binding for revert-all-buffers 
+;; - key-binding for revert-all-buffers
 (require 'set-buffers)
 
 ;; - ido + flx and nav-tree
@@ -77,7 +80,7 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;; =========================================================================== 
+;; ===========================================================================
 ;; text editing
 ;; ===========================================================================
 
@@ -92,12 +95,18 @@
 ;; - language mode hooks. should also move this to langs and frameworks
 (require 'set-tabbing)
 
+(require 'init-evil-leader)
+
 ;; - key-bindings for elscreen movement
 ;; - set mode-line color by evil state, and when buffer is dirty
 ;; - disable evil for some modes
 (require 'init-evil)
+
 (require 'init-multiple-cursors)
 (require 'init-expand-region)
+(require 'init-smartparens)
+
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; ===========================================================================
 ;; version control
@@ -106,7 +115,7 @@
 (require 'init-magit)
 
 ;; ===========================================================================
-;; org-mode 
+;; org-mode
 ;; ===========================================================================
 
 ;; - setting default

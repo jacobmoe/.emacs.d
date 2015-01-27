@@ -2,7 +2,7 @@
 ;; default is org-force-cycle-archived
 (add-hook 'org-mode-hook (lambda () (local-unset-key (kbd "<C-tab>"))))
 
-;; set visual line mode 
+;; set visual line mode
 (add-hook 'org-mode-hook (lambda () (visual-line-mode 1)))
 
 ;; syntax highlight code blocks
@@ -16,13 +16,13 @@
              (sequence "|" "CANCELED(c)" "STARTED(s)" "NOTE(n)"  "QUESTION(q)")))
 
 (setq org-todo-keyword-faces
-			'(("TODO" . org-warning) 
-				("NOTE" . (:background "orange" :foreground "black"))
-				("CANCELED" . (:foreground "blue" :weight bold))
-				("STARTED" . (:foreground "green"))
-				("RUN" . (:foreground "yellow"))
-				("GYM" . (:foreground "yellow"))
-				("QUESTION" . (:foreground "purple"))))
+      '(("TODO" . org-warning)
+        ("NOTE" . (:background "orange" :foreground "black"))
+        ("CANCELED" . (:foreground "blue" :weight bold))
+        ("STARTED" . (:foreground "green"))
+        ("RUN" . (:foreground "yellow"))
+        ("GYM" . (:foreground "yellow"))
+        ("QUESTION" . (:foreground "purple"))))
 
 ;; Org-mode file-directory
 (setq org-directory "~/notes")

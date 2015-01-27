@@ -3,6 +3,9 @@
 (require 'helm-files)
 (require 'helm-grep)
 
+(global-unset-key (kbd "s-t"))
+(global-set-key (kbd "s-t") 'helm-projectile)
+
 (global-set-key (kbd "C-c h p") 'helm-projectile) ;; same as C-c p h
 (global-set-key (kbd "C-c h k") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h b") 'helm-mini) ;; open buffers
