@@ -59,6 +59,7 @@
     evil-leader
     diminish
     key-chord
+    flycheck
 
     ;; == snippets =====================
     yasnippet
