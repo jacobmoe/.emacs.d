@@ -111,6 +111,9 @@
 (require 'init-expand-region)
 (require 'init-smartparens)
 
+;; init yasnippet and other snippet packages
+(require 'set-snippets)
+
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; ===========================================================================

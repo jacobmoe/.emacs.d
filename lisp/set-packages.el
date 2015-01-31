@@ -59,6 +59,10 @@
     evil-leader
     diminish
     key-chord
+
+    ;; == snippets =====================
+    yasnippet
+    angular-snippets
   ))
 
 (require 'cl)
