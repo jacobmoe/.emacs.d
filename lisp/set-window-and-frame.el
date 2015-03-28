@@ -11,6 +11,9 @@
 ;; show line numbers. seems to cause problems in the terminal
 (global-linum-mode 1)
 
+;; size of linum-mode font
+(set-face-attribute 'linum nil :height 100)
+
 ;; highlight current line
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#354043")

@@ -43,9 +43,6 @@
 ;; window and frame
 ;; ===========================================================================
 
-;; size of linum-mode font
-(set-face-attribute 'linum nil :height 100)
-
 ;; - basic defaults like tool-bar-mode, linum-mode, etc
 ;; - key bindings for resizing a window
 (require 'set-window-and-frame)
@@ -155,17 +152,3 @@
 
 ;; - flycheck using jshint for js files
 (require 'set-javascript)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (angular-snippets yasnippet yaml-mode go-mode js2-mode jade-mode stylus-mode scss-mode sass-mode flatland-theme tangotango-theme monokai-theme color-theme-solarized color-theme zenburn-theme flycheck key-chord diminish smartparens ess elscreen neotree dired-subtree dired-details+ dired-details fill-column-indicator ag helm-projectile helm flx-ido ack-and-a-half exec-path-from-shell restclient magit sws-mode s projectile multiple-cursors highlight-indentation expand-region evil-surround evil-leader evil auto-complete))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
