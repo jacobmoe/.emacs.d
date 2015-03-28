@@ -3,60 +3,67 @@
 (require 'package)
 (package-initialize)
 
+;; packages directory has packages not installed through the package manager
+(add-to-list 'load-path
+  (expand-file-name "packages/" user-emacs-directory))
+
 ;; add package archives, in addition to gnu - http://elpa.gnu.org/packages/
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(package-initialize)
 
 (defvar required-packages
   '(
-    auto-complete
-    evil
-    evil-leader
-    evil-surround
-    expand-region
-    goto-chg
-    highlight-indentation
-    multiple-cursors
-    popup
-    projectile
-    pkg-info
-    epl
-    dash
-    s
-    sws-mode
-    undo-tree
-    magit
+    ;; misc
     restclient
-
     exec-path-from-shell ;; use $PATH from system in emacs shell
+
+    ;; windows and buffers
+    elscreen
+    diminish
+    fill-column-indicator
+    highlight-indentation
+
+    ;;version control
+    magit
+
+    ;; project and file management
+    projectile
+    dired-details
+    dired-details+
+    dired-subtree
+    neotree
     ack-and-a-half
+    ag
     flx-ido
     helm
     helm-projectile
-    ag
-    fill-column-indicator
-    dired-details ;; can be removed in 24.4
-    dired-details+ ;; remove in 24.4
-    dired-subtree
-    neotree
-    elscreen
-    ess
+
+    ;; text editing
+    evil
+    evil-leader
+    evil-surround
+    undo-tree
     smartparens
-    diminish
     key-chord
     flycheck
+    expand-region
+    company
+    tern
+    company-tern
+    multiple-cursors
 
-    ;; == color themes =======================================================
+    ;; themes
     zenburn-theme
     color-theme
+
     ;; color-theme-sanityinc-tomorrow
     color-theme-solarized
     monokai-theme
     tangotango-theme
     flatland-theme
 
-    ;; == language modes =====================================================
+    ;; language modes
+    ess
     sass-mode
     scss-mode
     stylus-mode
@@ -66,9 +73,13 @@
     go-mode
     yaml-mode
 
-    ;; == snippets ===========================================================
+    ;; snippets
     yasnippet
     angular-snippets
+
+    ;; elisp
+    dash
+    s
   ))
 
 (require 'cl)

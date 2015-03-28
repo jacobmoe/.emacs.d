@@ -128,6 +128,9 @@
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
+;; init company-mode and company backends
+(require 'set-completion)
+
 ;; ===========================================================================
 ;; version control
 ;; ===========================================================================

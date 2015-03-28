@@ -1,22 +1,30 @@
 ;; unset C-tab to use tab-to-tab-stop (set in set-tabbing.el)
 ;; default is org-force-cycle-archived
-(add-hook 'org-mode-hook (lambda () (local-unset-key (kbd "<C-tab>"))))
 
-;; set visual line mode
-(add-hook 'org-mode-hook (lambda () (visual-line-mode 1)))
+(defun set-org-preferences()
+    ;; set visual line mode
+    (visual-line-mode 1)
+
+    ;; using this binding for tab-to-tab-stop (force a tab)
+    (local-unset-key (kbd "<C-tab>"))
+
+(add-hook 'org-mode-hook 'set-org-preferences)
+
+;; no to wysiwygs! don't hide markup for hyperlinks: [[http:mylink.com][my-link]]
+(setq org-descriptive-links nil)
 
 ;; syntax highlight code blocks
 (setq org-src-fontify-natively t)
 
- ;; setting extra org-mode keywords
+;; setting extra org-mode keywords
 (setq org-todo-keywords
-           '((sequence "TODO(t)" "|" "DONE(d)")
-             (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
-             (sequence "RUN(r)" "GYM(g)")
-             (sequence "|" "CANCELED(c)" "STARTED(s)" "NOTE(n)"  "QUESTION(q)")))
+        '((sequence "TODO(t)" "|" "DONE(d)")
+            (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
+            (sequence "RUN(r)" "GYM(g)")
+            (sequence "|" "CANCELED(c)" "STARTED(s)" "NOTE(n)"  "QUESTION(q)")))
 
 (setq org-todo-keyword-faces
-      '(("TODO" . org-warning)
+    '(("TODO" . org-warning)
         ("NOTE" . (:background "orange" :foreground "black"))
         ("CANCELED" . (:foreground "blue" :weight bold))
         ("STARTED" . (:foreground "green"))
@@ -31,9 +39,9 @@
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 (setq org-agenda-files '("~/notes/test.org"))
 (setq org-mobile-files '(
-       (concat org-directory "/twg/demos.org")
-       (concat org-directory "/daily.org")
-       (concat org-directory "/general_notes.org")))
+    (concat org-directory "/twg/demos.org")
+    (concat org-directory "/daily.org")
+    (concat org-directory "/general_notes.org")))
 (setq org-mobile-inbox-for-pull "~/notes/inbox.org")
 
 ;; org-capture
@@ -43,19 +51,20 @@
 (setq org-capture-templates
     '(("t" "Todo" entry (file+headline (concat org-directory "/gtd/notes.org") "Tasks")
         "* TODO %?\n%u %i\n")
-      ("m" "Music" entry (file+headline (concat org-directory "/gtd/notes.org") "Music")
+    ("m" "Music" entry (file+headline (concat org-directory "/gtd/notes.org") "Music")
         "* TODO %?\n %i\n")
-      ("M" "Movie" entry (file+headline (concat org-directory "/gtd/notes.org") "Movies")
+    ("M" "Movie" entry (file+headline (concat org-directory "/gtd/notes.org") "Movies")
         "* TODO %?\n %i\n")
-      ("L" "Learn" entry (file+headline (concat org-directory "/gtd/notes.org") "Learn")
+    ("L" "Learn" entry (file+headline (concat org-directory "/gtd/notes.org") "Learn")
         "* TODO %?\n %i\n")
-      ("f" "Fear" entry (file+headline (concat org-directory "/gtd/notes.org") "Fear")
+    ("f" "Fear" entry (file+headline (concat org-directory "/gtd/notes.org") "Fear")
         "* %u\n %? %i\n")
-      ("l" "Link" entry (file+headline (concat org-directory "/gtd/notes.org") "Links")
+    ("l" "Link" entry (file+headline (concat org-directory "/gtd/notes.org") "Links")
         "* %? \n%i\n")
-      ("i" "Idea" entry (file+headline (concat org-directory "/gtd/notes.org") "Ideas")
+    ("i" "Idea" entry (file+headline (concat org-directory "/gtd/notes.org") "Ideas")
         "* %? \n%i\n")
-      ("b" "Book" entry (file+headline (concat org-directory "/gtd/notes.org") "Books")
+    ("b" "Book" entry (file+headline (concat org-directory "/gtd/notes.org") "Books")
         "* TODO %?\n %i\n")))
+)
 
 (provide 'init-org-mode)

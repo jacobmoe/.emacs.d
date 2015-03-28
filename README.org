@@ -1,0 +1,62 @@
+* Dependencies
+- [[http://jshint.com/][jshint]]
+- npm install -g [[http://ternjs.net/][tern]]
+* Packages
+** misc
+- restclient
+- exec-path-from-shell ;; use $PATH from system in emacs shell
+** windows and buffers
+- elscreen
+- diminish
+- fill-column-indicator
+- highlight-indentation
+** version control
+- magit
+** project and file management
+- projectile
+- dired-details
+- dired-details+
+- dired-subtree
+- neotree
+- ack-and-a-half
+- ag
+- flx-ido
+- helm
+- helm-projectile
+** text editing
+- evil
+- evil-leader
+- evil-surround
+- undo-tree
+- smartparens
+- key-chord
+- flycheck
+- expand-region
+- company
+- tern
+- company-tern
+- multiple-cursors
+** themes
+- zenburn-theme
+- color-theme
+- ;; color-theme-sanityinc-tomorrow
+- color-theme-solarized
+- monokai-theme
+- tangotango-theme
+- flatland-theme
+** language modes
+- ess
+- sass-mode
+- scss-mode
+- stylus-mode
+- jade-mode
+- haml-mode
+- js2-mode
+- go-mode
+- yaml-mode
+** snippets
+- yasnippet
+- angular-snippets
+** elisp
+- dash
+- s
