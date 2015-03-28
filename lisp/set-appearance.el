@@ -2,18 +2,19 @@
 ;; color themes
 ;; ===========================================================================
 
-(add-to-list 'load-path 
+(add-to-list 'load-path
   (expand-file-name "packages/color-theme-sanityinc-tomorrow/" user-emacs-directory))
 
-(add-to-list 'custom-theme-load-path 
+(add-to-list 'custom-theme-load-path
   (expand-file-name "packages/color-theme-sanityinc-tomorrow/" user-emacs-directory))
 
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'sanityinc-tomorrow-night t)
-;; (load-theme 'zenburn t)
+(load-theme 'zenburn t)
 ;; (load-theme 'monokai t)
 ;; (load-theme 'tangotango t)
-(load-theme 'flatland t)
+;; (load-theme 'flatland t)
+;; (load-theme 'base16-default t)
 
 ;; ===========================================================================
 ;; typeface
@@ -41,5 +42,5 @@
        (set-frame-parameter nil 'alpha '(100 100))
      (set-frame-parameter nil 'alpha '(99 95))))
  (global-set-key (kbd "C-c t") 'toggle-transparency)
- 
+
 (provide 'set-appearance)

@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
 # contributor: jacobmoe <jacobmoe@gmail.com>
-# name : function
-# key: fu
+# name : mocha it block
+# key: it
 # --
-function ${1:name} ($2) {
-  $3
-}
+it('$1', function (done) {
+  $0
+})

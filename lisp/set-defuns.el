@@ -1,7 +1,7 @@
 ;; fullpath-relative-to-current-file
 ;; http://ergoemacs.org/emacs/elisp_relative_path.html
 (defun expand-relative-path (file-relative-path)
-	(concat (file-name-directory 
+  (concat (file-name-directory
     (or load-file-name buffer-file-name)) file-relative-path))
 
 ;; revert all buffers that are visiting a file.

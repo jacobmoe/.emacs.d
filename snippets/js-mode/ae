@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # contributor: jacobmoe <jacobmoe@gmail.com>
-# name : module.exports
-# key: mod
+# name : function
+# key: ae
 # --
-module.exports = $0
+assert.equal($0)

@@ -1,6 +1,6 @@
-;; ==== evil-leader package ==========
-;; set "leader key"
+;; ==== evil-leader package ==================================================
 
+;; set "leader key"
 (global-evil-leader-mode)
 (setq evil-leader/in-all-states 1)
 
@@ -11,7 +11,12 @@
   "b" 'switch-to-buffer
   "k" 'kill-buffer)
 
-;; ==== evil-mode =====================
+;; ==== evil-surround ========================================================
+
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
+;; ==== evil-mode ============================================================
 
 (evil-mode 1)
 

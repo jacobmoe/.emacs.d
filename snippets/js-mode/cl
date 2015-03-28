@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # contributor: jacobmoe <jacobmoe@gmail.com>
-# name : module.exports
-# key: mod
+# name : mocha console.log()
+# key: cl
 # --
-module.exports = $0
+console.log($0)

@@ -3,4 +3,4 @@
 # name : require
 # key: r
 # --
-require('$1')
+require('$0')

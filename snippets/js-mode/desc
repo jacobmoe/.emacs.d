@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
 # contributor: jacobmoe <jacobmoe@gmail.com>
-# name : mocha it block
-# key: mi
+# name : mocha describe
+# key: desc
 # --
-it('$1', function (done) {
-  $2
+describe('$1', function () {
+  $0
 })

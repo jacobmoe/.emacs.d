@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
 # contributor: jacobmoe <jacobmoe@gmail.com>
-# name : mocha beforeEach
-# key: mbe
+# name : named function
+# key: fun
 # --
-beforeEach(function (done) {
-  $1
-})
+function $1 ($2) {
+  $0
+}

@@ -12,10 +12,10 @@
   '(
     auto-complete
     evil
+    evil-leader
+    evil-surround
     expand-region
-    go-mode
     goto-chg
-    haml-mode
     highlight-indentation
     multiple-cursors
     popup
@@ -29,16 +29,7 @@
     magit
     restclient
 
-    ;; == color themes ==================
-    zenburn-theme
-    color-theme
-    ;; color-theme-sanityinc-tomorrow
-    color-theme-solarized
-    monokai-theme
-    tangotango-theme
-    flatland-theme
-
-    exec-path-from-shell
+    exec-path-from-shell ;; use $PATH from system in emacs shell
     ack-and-a-half
     flx-ido
     helm
@@ -51,17 +42,31 @@
     neotree
     elscreen
     ess
-    sass-mode
-    stylus-mode
-    jade-mode
-    js2-mode
     smartparens
-    evil-leader
     diminish
     key-chord
     flycheck
 
-    ;; == snippets =====================
+    ;; == color themes =======================================================
+    zenburn-theme
+    color-theme
+    ;; color-theme-sanityinc-tomorrow
+    color-theme-solarized
+    monokai-theme
+    tangotango-theme
+    flatland-theme
+
+    ;; == language modes =====================================================
+    sass-mode
+    scss-mode
+    stylus-mode
+    jade-mode
+    haml-mode
+    js2-mode
+    go-mode
+    yaml-mode
+
+    ;; == snippets ===========================================================
     yasnippet
     angular-snippets
   ))

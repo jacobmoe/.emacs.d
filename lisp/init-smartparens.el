@@ -3,9 +3,20 @@
 
 (smartparens-global-mode 1)
 
+(global-set-key (kbd "C-c s ;") 'sp-unwrap-sexp)
+
 ;; :wrap defines keybindings for the wrap
-;; useful with evil-mode
+;; NOTE: also trying evil-surround which might
+;; mean none of the following is needed
 (sp-pair "(" ")" :wrap "C-)")
+(sp-pair "(" ")" :wrap "C-c s )")
+
 (sp-pair "\"" "\"" :wrap "C-\"")
+(sp-pair "\"" "\"" :wrap "C-c s \"")
+
+(sp-pair "'" "'" :wrap "C-c s '")
+(sp-pair "`" "`" :wrap "C-c s `")
+(sp-pair "{" "}" :wrap "C-c s }")
+(sp-pair "[" "]" :wrap "C-c s ]")
 
 (provide 'init-smartparens)
