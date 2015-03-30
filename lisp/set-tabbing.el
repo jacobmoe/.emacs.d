@@ -44,6 +44,18 @@
   (function (lambda ()
     (setq evil-shift-width default-indent-level))))
 
+(add-hook 'html-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width default-indent-level))))
+
+(add-hook 'css-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width default-indent-level))))
+
+(add-hook 'scss-mode-hook
+  (function (lambda ()
+    (setq evil-shift-width default-indent-level))))
+
 (add-hook 'go-mode-hook
   (function (lambda ()
     (setq evil-shift-width go-indent-offset))))

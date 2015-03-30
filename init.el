@@ -51,8 +51,6 @@
 ;; - show column and line number
 (require 'set-modeline)
 
-;; (require 'init-elscreen)
-
 ;; ===========================================================================
 ;; buffers, files and directories
 ;; ===========================================================================
@@ -79,12 +77,6 @@
 ;; shell
 ;; ===========================================================================
 
-;; problem: copy some text from outside of emacs. come back to emacs, kill
-;; some text that you want to replace, and paste. nope - the contents of the
-;; clipboard has been replaced by the the text you just killed. this var adds
-;; the contents of the clipboard to the kill-ring first.
-(setq save-interprogram-paste-before-kill t)
-
 ;; set emacs shell PATH variable from system PATH
 (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
@@ -93,6 +85,12 @@
 ;; ===========================================================================
 ;; text editing
 ;; ===========================================================================
+
+;; problem: copy some text from outside of emacs. come back to emacs, kill
+;; some text that you want to replace, and paste. nope - the contents of the
+;; clipboard has been replaced by the the text you just killed. this var adds
+;; the contents of the clipboard to the kill-ring first.
+(setq save-interprogram-paste-before-kill t)
 
 (electric-indent-mode -1)
 
@@ -114,7 +112,6 @@
 
 ;; - configure evil-leader
 ;; - configure evil-surround
-;; - key-bindings for elscreen movement
 ;; - set mode-line color by evil state, and when buffer is dirty
 ;; - disable evil for some modes
 (require 'init-evil)
@@ -123,10 +120,14 @@
 (require 'init-expand-region)
 (require 'init-smartparens)
 
-;; init yasnippet and other snippet packages
-(require 'set-snippets)
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
+
+;; ===========================================================================
+;; completion
+;; ===========================================================================
+;; init yasnippet and other snippet packages
+(require 'set-snippets)
 
 ;; init company-mode and company backends
 (require 'set-completion)
@@ -155,3 +156,17 @@
 
 ;; - flycheck using jshint for js files
 (require 'set-javascript)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yaml-mode jade-mode stylus-mode scss-mode sass-mode go-mode ess robe inf-ruby company-tern tern js2-mode flatland-theme tangotango-theme monokai-theme color-theme-solarized color-theme-sanityinc-tomorrow color-theme zenburn-theme yasnippet company multiple-cursors expand-region flycheck key-chord smartparens evil-surround evil-leader evil helm-projectile helm flx-ido ag ack-and-a-half neotree dired-subtree dired-details+ dired-details projectile magit highlight-indentation fill-column-indicator diminish exec-path-from-shell restclient))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

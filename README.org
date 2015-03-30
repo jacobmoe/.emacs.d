@@ -6,7 +6,6 @@
 - restclient
 - exec-path-from-shell ;; use $PATH from system in emacs shell
 ** windows and buffers
-- elscreen
 - diminish
 - fill-column-indicator
 - highlight-indentation
@@ -32,10 +31,10 @@
 - key-chord
 - flycheck
 - expand-region
-- company
-- tern
-- company-tern
 - multiple-cursors
+** completion and snippets
+- company
+- yasnippet
 ** themes
 - zenburn-theme
 - color-theme
@@ -44,19 +43,25 @@
 - monokai-theme
 - tangotango-theme
 - flatland-theme
-** language modes
+** language related modes
+*** javascript
+- js2-mode
+- tern
+- company-tern
+*** ruby
+- inf-ruby
+- robe
+*** r
 - ess
+*** go
+- go-mode
+*** preprocessors
 - sass-mode
 - scss-mode
 - stylus-mode
 - jade-mode
 - haml-mode
-- js2-mode
-- go-mode
 - yaml-mode
-** snippets
-- yasnippet
-- angular-snippets
-** elisp
+*** elisp
 - dash
 - s

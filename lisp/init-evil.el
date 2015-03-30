@@ -25,11 +25,6 @@
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 
-;;(define-key evil-normal-state-map (kbd "C-w t") 'elscreen-create) ;create tab
-;;(define-key evil-normal-state-map (kbd "C-w x") 'elscreen-kill) ;kill tab
-(define-key evil-normal-state-map "gT" 'elscreen-previous) ;previous tab
-(define-key evil-normal-state-map "gt" 'elscreen-next) ;next tab
-
 ;; change mode-line color by evil state
 ;; and when buffer is dirty
 (lexical-let ((default-color (cons (face-background 'mode-line)

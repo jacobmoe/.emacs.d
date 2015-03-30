@@ -2,11 +2,11 @@
 ;; color themes
 ;; ===========================================================================
 
-(add-to-list 'load-path
-  (expand-file-name "packages/color-theme-sanityinc-tomorrow/" user-emacs-directory))
+;; (add-to-list 'load-path
+;;   (expand-file-name "packages/color-theme-sanityinc-tomorrow/" user-emacs-directory))
 
-(add-to-list 'custom-theme-load-path
-  (expand-file-name "packages/color-theme-sanityinc-tomorrow/" user-emacs-directory))
+;; (add-to-list 'custom-theme-load-path
+;;   (expand-file-name "packages/color-theme-sanityinc-tomorrow/" user-emacs-directory))
 
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'sanityinc-tomorrow-night t)
