@@ -4,7 +4,7 @@
 (require 'helm-grep)
 
 (global-unset-key (kbd "s-t"))
-(global-set-key (kbd "s-t") 'helm-projectile)
+(global-set-key (kbd "s-t") 'helm-projectile-find-file)
 
 (global-set-key (kbd "C-c h p") 'helm-projectile) ;; same as C-c p h
 (global-set-key (kbd "C-c h k") 'helm-show-kill-ring)
@@ -18,6 +18,7 @@
 ; do not show these files in helm buffer
 (setq helm-boring-file-regexp-list '("\\.git$" "\\.hg$"))
 
+;; NOTE: this might be crashing emacs 24.4
 (setq helm-buffers-fuzzy-matching t)
 
 (provide 'init-helm)

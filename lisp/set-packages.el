@@ -91,12 +91,21 @@
 ;; it will create an org-mode table using the required-packages alist
 ;; to be inserted into the README as package documentation
 ;; use mapconcat
+
 (defun required-packages-docs-table ()
   (setq table-head "|-|-|\n")
   (setq result "")
   (loop for value in required-packages
         do (setq result (concat result "|" (nth 0 value) "|" (nth 3 value) "|\n")))
   (insert (concat table-head result table-head)))
+
+;; ;; which version to use???
+;; ;; package names should be strings and use (intern p) to cast to symbol
+;; (defun set-packages-get-docs-as-table ()
+;;   (setq result "|-|-|\n")
+;;   (loop for (key . value) in required-packages
+;;         do (setq result (concat result "|" (nth 2 value) "|" (nth 0 value) "|\n"))
+;;   (insert result)))
 
 ; check if all packages are installed
 (defun packages-installed-p ()
