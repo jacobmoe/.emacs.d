@@ -90,6 +90,8 @@
 ;; TODO working on this method
 ;; it will create an org-mode table using the required-packages alist
 ;; to be inserted into the README as package documentation
+;; use mapconcat
+;; package names should be strings and use (intern p) to cast to symbol
 (defun set-packages-get-docs-as-table ()
   (setq result "|-|-|\n")
   (loop for (key . value) in required-packages

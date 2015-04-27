@@ -1,5 +1,5 @@
 * Dependencies
-- [[http://jshint.com/][jshint]]
+- npm install -g [[http://jshint.com/][jshint]]
 - npm install -g [[http://ternjs.net/][tern]]
 * Packages
 ** misc

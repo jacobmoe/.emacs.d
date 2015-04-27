@@ -1,0 +1,81 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ (#("/Users/jacobmoe/code/twg/tgam-ios/" 16 20 (face flx-highlight-face) 21 24 (face flx-highlight-face)) . "WebViews/")
+ (#("/Users/jacobmoe/code/" 16 20 (face flx-highlight-face)) . "tools/")
+ (#("/Users/jacobmoe/code/tools/" 16 20 (face flx-highlight-face) 21 26 (face flx-highlight-face)) . "planb/")
+ ("/Users/jacobmoe/notes/" . "projects/")
+ ("/Users/jacobmoe/" . ".emacs.d/")
+ ("/Users/jacobmoe/code/twg/" . "tgam-ios/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ #("/Users/jacobmoe/code/twg/tgam-ios/WebViews/" 16 20 (face flx-highlight-face) 21 24 (face flx-highlight-face))
+ #("/Users/jacobmoe/code/" 16 20 (face flx-highlight-face))
+ #("/Users/jacobmoe/notes/projects/" 16 21 (face flx-highlight-face) 22 28 (face flx-highlight-face))
+ #("/Users/jacobmoe/notes/twg/" 16 21 (face flx-highlight-face) 22 26 (face flx-highlight-face))
+ "/Users/jacobmoe/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".jshintrc"
+ "tools"
+ "failsafe.org"
+ "globe.org"
+ ".gitconfig"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ (#("/Users/jacobmoe/code/tools/planb/" 16 20 (face flx-highlight-face) 21 26 (face flx-highlight-face)) (21816 61746 0 0) "package.json" "node_modules/" "lib/" "api-fallback.js" ".jshintrc" ".gitignore" ".git/" "../" "./")
+
+ (#("/Users/jacobmoe/code/tools/" 16 20 (face flx-highlight-face) 21 26 (face flx-highlight-face)) (21816 62140 0 0) "planb/" "../" "./")
+
+ (#("/Users/jacobmoe/code/tools/api-fallback/" 16 20 (face flx-highlight-face) 21 26 (face flx-highlight-face)) (21816 61227 0 0) "package.json" "node_modules/" "lib/" "api-fallback.js" ".jshintrc" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/jacobmoe/code/tools/failsafe/" (21816 1742 0 0) "package.json" "npm-debug.log" "failsafe.js" ".tern-port" ".git/" "../" "./")
+
+ ("/Users/jacobmoe/" (21816 609 0 0) "Public/" "Pictures/" "npm-debug.log" "notes/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Desktop/" "code/" "Applications/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".pow/" ".npm/" ".node-gyp/" ".local/" ".jiratime" ".gitconfig" ".emacs.d/" ".DS_Store" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_profile" ".bash_history" "../" "./")
+
+ (#("/Users/jacobmoe/code/" 16 20 (face flx-highlight-face)) (21815 65274 0 0) "twg/" "tools/" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/jade/article/templates/" (21815 59946 0 0) "vmevideo.jade" "review.jade" "interactive.jade" "enriched.jade" "embeddable.jade" "default.jade" "column.jade" "advNews.jade" "../" "./")
+
+ (#("/Users/jacobmoe/notes/projects/" 16 21 (face flx-highlight-face) 22 28 (face flx-highlight-face)) (21815 64384 0 0) "space_apps.org" "songs.org" "pmpy.org" "learning.org" "jacobm.org" "instaliker.org" "ideas.org" "failsafe.org" "cans.org" "blorg.org" ".DS_Store" "../" "./")
+
+ (#("/Users/jacobmoe/notes/" 16 21 (face flx-highlight-face)) (21815 64384 0 0) "work.org" "websockets.org" "web/" "vim_notes.org" "vagrant.org" "twg/" "test.org" "tcp-ip.org" "sublime.org" "software.org" "snippets.org" "server.org" "school/" "raspberry_pi.org" "rails_tests.org" "rails_deploy.org" "rails_app_setup.org" "python.org" "projects/" "postgres.org" "personal.org" "numbers.org" "node.org" "networks.org" "movies.org" "misc/" "loans.org" "lists.org" "javascript.org" "ios.org" "inbox.org" "hours.org" "hints.org" "heroku.org" "gtd/" "git.org" "general.org" "emacs.org" "elisp.org" "elasticsearch.org" "databases.org" "daily.org" "books.org" "bash.org" "applications.org" "applescript.org" "2013.org" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/jacobmoe/notes/twg/" (21815 64384 0 0) "wikiwash.org" "telus.org" "swtoronto.org" "svx.org" "shorcan.org" "replan.org" "publicinc.org" "organics-live.org" "ole_db.org" "nodeconf.org" "itmhrt.org" "ideaboost.org" "homewood.org" "globe.org" "foodland.org" "everlane.org" "demos.org" "conductor.org" "cbc-clh.org" "bigterminal.org" "almost_scrum.org" "accessstorage.org" ".DS_Store" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/" (21815 63063 0 0) "test/" "tasks/" "src/" "README.md" "package.json" "node_modules/" "gulpfile.js" "fixtures/" "dist/" "dependencies.js" "build_path.txt" "bower_components/" "bower.json" "app.js" ".swp" ".jshintrc" ".DS_Store" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/" (21815 59489 0 0) "WebViews/" "Vendor/" "section1.json" "Scripts/" "README.md" "Pods/" "Podfile.lock" "Podfile" "paw/" "npm-debug.log" "hockey_uploader/" "GlobeAndMailTests/" "GlobeAndMailSnapshotTests/" "GlobeAndMailSnapshots/" "GlobeAndMail.xcworkspace/" "GlobeAndMail.xcodeproj/" "GlobeAndMail.png" "GlobeAndMail.dot" "GlobeAndMail/" "Globe News WatchKit Extension/" "Globe News WatchKit App/" "Gemfile.lock" "Gemfile" "Fabric.framework/" "docs/" "Crashlytics.framework/" "CHANGELOG.md" ".travis.yml" ".gitignore" ".git/" ".DS_Store" ".clang-format" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/homewood-web/" (21813 976 0 0) "views/" "vendor/" "test/" "tasks/" "README.md" "public/" "package.json" "node_modules/" "mongodb.json" "log/" "lib/" "gulpfile.js" "ecosystem.json" "dump/" "data/" "config/" "bower_components/" "bower.json" "bin/" "assets/" "app.js" ".jshintrc" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/" (21809 25298 0 0) "tgam-ios/" "homewood-web/" ".DS_Store" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/js/directives/" (21809 13167 0 0) "sizeReporter.js" "gamAdvert.js.orig" "gamAdvert.js" ".tern-port" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/test/section/directives/" (21803 51359 0 0) "gamModule.js" "gamAdvert.js" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/jade/article/" (21803 57975 0 0) "templates/" "includes/" "_body.jade" "../" "./")
+
+ ("/Users/jacobmoe/.emacs.d/" (21800 13052 0 0) "snippets/" "README.org" "projectile-bookmarks.eld" "packages/" "lisp/" "init.el" "ido.last" "elpa/" "custom.el" "backups/" "autosaves/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/jade/section/" (21800 13366 0 0) "templates/" "_body.jade" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/js/services-web/" (21800 8784 0 0) "navigationApi-web.js.orig" "navigationApi-web.js" "dataApi-web.js" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/js/article/" (21789 39699 0 0) "services/" "directives/" "ArticleCtrl.js" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/js/services/" (21788 19993 0 0) "navigationApi.js" "nativeElement.js" "helpers.js" "dataApi.js" "../" "./")
+
+ ("/Users/jacobmoe/code/twg/tgam-ios/WebViews/src/jade/related/" (21788 6848 0 0) "_body.jade" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
