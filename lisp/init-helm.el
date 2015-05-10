@@ -2,6 +2,7 @@
 (require 'helm-config)
 (require 'helm-files)
 (require 'helm-grep)
+(require 'helm-projectile)
 
 (global-unset-key (kbd "s-t"))
 (global-set-key (kbd "s-t") 'helm-projectile-find-file)

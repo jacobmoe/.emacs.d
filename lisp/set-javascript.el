@@ -10,7 +10,13 @@
 
 ;; use flycheck for js-mode
 (setq flycheck-jshintrc ".jshintrc")
-(add-hook 'js-mode-hook 'flycheck-mode)
-(add-hook 'js2-mode-hook 'flycheck-mode)
+
+(defun js-mode-handler ()
+    (flycheck-mode)
+    (local-set-key (kbd "C-c C-.") 'tern-find-definition)
+    (local-set-key (kbd "C-c C-,") 'tern-pop-find-definition))
+
+(add-hook 'js-mode-hook 'js-mode-handler)
+(add-hook 'js2-mode-hook 'js-mode-handler)
 
 (provide 'set-javascript)

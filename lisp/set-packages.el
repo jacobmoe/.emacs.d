@@ -69,10 +69,12 @@
     ;;; ruby
     ("inf-ruby"     "ruby" "" "inf-ruby")
     ("robe"         "ruby" "" "robe")
+    ("rspec-mode"   "ruby" "" "rspec")
     ;;; r
     ("ess"          "r" "" "ess")
     ;;; go
     ("go-mode"      "go" "" "go-mode")
+    ("company-go"   "go" "" "company-go")
     ;;; preprocessors
     ("sass-mode"    "preprocessors" "" "sass-mode")
     ("scss-mode"    "preprocessors" "" "scss-mode")

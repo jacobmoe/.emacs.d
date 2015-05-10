@@ -1,3 +1,8 @@
+(defun company-mode-handler ()
+  (global-set-key (kbd "C-c C-;") 'company-complete))
+
+(add-hook 'company-mode-hook 'company-mode-handler)
+
 ;; ==== javascript ===========================================================
 
 (defun config-company-tern()
@@ -16,5 +21,13 @@
   (add-to-list 'company-robe 'company-backends))
 
 (add-hook 'ruby-mode-hook 'config-company-robe)
+
+;; ==== golang ===============================================================
+
+(defun config-company-go()
+  (company-mode t)
+  (set (make-local-variable 'company-backends) '(company-go)))
+
+(add-hook 'ruby-mode-hook 'config-company-go)
 
 (provide 'set-completion)

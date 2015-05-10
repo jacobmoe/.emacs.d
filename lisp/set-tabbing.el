@@ -20,9 +20,10 @@
 (setq js-indent-level 2)
 
 ;; use indent-level for evil-shift-width
+
 (add-hook 'ruby-mode-hook
   (function (lambda ()
-    (setq evil-shift-width ruby-indent-level))))
+    (setq evil-shift-width default-indent-level))))
 
 (add-hook 'js-mode-hook
   (function (lambda ()
@@ -34,7 +35,7 @@
 
 (add-hook 'jade-mode-hook
   (function (lambda ()
-    (setq evil-shift-width 2))))
+    (setq evil-shift-width default-indent-level))))
 
 (add-hook 'haml-mode-hook
   (function (lambda ()
