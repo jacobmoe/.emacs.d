@@ -1,9 +1,13 @@
 ;; unset C-tab to use tab-to-tab-stop (set in set-tabbing.el)
 ;; default is org-force-cycle-archived
 
+
 (defun set-org-preferences()
     ;; set visual line mode
     (visual-line-mode 1)
+
+    ;; turn off hyperlink wysiwyg feature
+    (setq org-descripive-links nil)
 
     ;; using this binding for tab-to-tab-stop (force a tab)
     (local-unset-key (kbd "<C-tab>"))

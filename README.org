@@ -1,6 +1,6 @@
 * Dependencies
 ** js2-mode
-- npm install -g [[http://jshint.com/][jshint]]
+- npm install -g [[http://eslint.org/][eslint]]
 - npm install -g [[http://ternjs.net/][tern]]
 ** go-mode
 - go get -u github.com/nsf/gocode

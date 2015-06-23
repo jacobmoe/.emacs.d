@@ -44,6 +44,7 @@
     ("undo-tree"        "text editing" "" "undo-tree")
     ("smartparens"      "text editing" "" "smartparens")
     ("key-chord"        "text editing" "" "key-chord")
+    ("let-alist"        "text editing" "" "flycheck dependency. might be able to remove.")
     ("flycheck"         "text editing" "" "flycheck")
     ("expand-region"    "text editing" "" "expand-region")
     ("multiple-cursors" "text editing" "" "multiple-cursors")
@@ -60,12 +61,15 @@
     ("monokai-theme"                  "themes" "" "monokai-theme")
     ("tangotango-theme"               "themes" "" "tangotango-theme")
     ("flatland-theme"                 "themes" "" "flatland-theme")
+    ("seti-theme"                     "themes" "" "seti-theme")
+    ("material-theme"                 "themes" "" "material-theme")
 
     ;; language related modes
     ;;; javascript
     ("js2-mode"     "javascript" "" "js2-mode")
     ("tern"         "javascript" "" "tern")
     ("company-tern" "javascript" "" "company-tern")
+    ("web-mode"     "javascript" "" "web-mode")
     ;;; ruby
     ("inf-ruby"     "ruby" "" "inf-ruby")
     ("robe"         "ruby" "" "robe")

@@ -1,12 +1,15 @@
-;; hide scroll bars
-(scroll-bar-mode -1)
+(if (display-graphic-p)
 
-;; remove tool-bar from GUI
-(tool-bar-mode -1)
+    ;; remove these if in GUI
+    (progn
+      (tool-bar-mode -1)
+      (scroll-bar-mode -1)
+        ;; remove menu-bar form GUI unless we're on OS X
+        ;; the GUI on linux takes up space in the frame.
+      (unless (eq system-type 'darwin) (menu-bar-mode -1)))
 
-;; remove menu-bar form GUI unless we're on OS X
-;; the GUI on linux takes up space in the frame.
-(unless (eq system-type 'darwin) (menu-bar-mode -1))
+    ;; if not in GUI
+    (menu-bar-mode -1))
 
 ;; show line numbers. seems to cause problems in the terminal
 (global-linum-mode 1)

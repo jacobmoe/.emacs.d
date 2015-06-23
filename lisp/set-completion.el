@@ -18,7 +18,7 @@
 (defun config-company-robe()
   (company-mode t)
   (robe-mode t)
-  (add-to-list 'company-robe 'company-backends))
+  (add-to-list 'company-backends 'company-robe))
 
 (add-hook 'ruby-mode-hook 'config-company-robe)
 

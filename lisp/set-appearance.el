@@ -10,11 +10,13 @@
 
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'sanityinc-tomorrow-night t)
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
 ;; (load-theme 'monokai t)
 ;; (load-theme 'tangotango t)
 ;; (load-theme 'flatland t)
 ;; (load-theme 'base16-default t)
+;; (load-theme 'seti t)
+(load-theme 'material t)
 
 ;; ===========================================================================
 ;; typeface
