@@ -1,3 +1,7 @@
+* Install 25
+** OSX
+brew install emacs --HEAD --use-git-head --with-cocoa --srgb
+ln -s /usr/local/Cellar/emacs/HEAD/Emacs.app /Applications
 * Dependencies
 ** js2-mode
 - npm install -g [[http://eslint.org/][eslint]]

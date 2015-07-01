@@ -1,3 +1,6 @@
+;; save window arrangement states in a ring
+(winner-mode 1)
+
 (if (display-graphic-p)
 
     ;; remove these if in GUI

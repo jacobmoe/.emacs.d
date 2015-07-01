@@ -16,6 +16,7 @@
     ;; misc
     ("restclient"           "misc" "" "restclient")
     ("exec-path-from-shell" "misc" "" "use $PATH from system in emacs shell")
+    ("hydra"                "misc" "" "hydra")
 
     ;; windows and buffers
     ("diminish"              "windows and buffers" "" "diminish")
@@ -50,7 +51,7 @@
     ("multiple-cursors" "text editing" "" "multiple-cursors")
 
     ;; completion and snippets
-    ("company" "completion-and-snippets" "" "company")
+    ("company"   "completion-and-snippets" "" "company")
     ("yasnippet" "completion-and-snippets" "" "yasnippet")
 
     ;; themes

@@ -1,14 +1,8 @@
 ;; init-foo.el - package-specific configuration
 ;; set-bar.el  - general config
 
+(package-initialize)
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-
-;; ===========================================================================
-;; helper functions
-;; ===========================================================================
-
-;; - revert-all-buffers
-(require 'set-defuns)
 
 ;; ===========================================================================
 ;; package management
@@ -17,6 +11,14 @@
 ;; - define required packages list
 ;; - install not yet installed required packages
 (require 'set-packages)
+
+;; ===========================================================================
+;; helpers
+;; ===========================================================================
+
+;; - revert-all-buffers
+(require 'set-defuns)
+(require 'init-hydra)
 
 ;; ===========================================================================
 ;; special files & dirs
@@ -124,8 +126,15 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; ===========================================================================
+;; dev tools
+;; ===========================================================================
+
+(require 'init-restclient)
+
+;; ===========================================================================
 ;; completion
 ;; ===========================================================================
+
 ;; init yasnippet and other snippet packages
 (require 'set-snippets)
 

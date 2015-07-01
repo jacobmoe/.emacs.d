@@ -20,6 +20,8 @@
 
 (evil-mode 1)
 
+(define-key evil-normal-state-map " " 'hydra-main/body)
+
 ;; when long lines are wrapped, j/k navigation jumps the entire
 ;; "real" line instead of the visual line. don't do that.
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
