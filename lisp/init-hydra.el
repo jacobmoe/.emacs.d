@@ -5,12 +5,15 @@
  ("m" hydra-magit/body "magit" :exit t)
  ("w" hydra-window-buffer/body "window" :exit t)
  ("x" execute-extended-command "M-x" :exit t)
+ ("1" (find-file "~/code/twg/s-trip") "s-trip" :exit t)
+ ("2" (find-file "~/code/twg/s-trip/karma-frontend") "karma-frontend" :exit t)
  ("q" nil "quit"))
 
 (defhydra hydra-projectile (:color blue :hint nil)
   ("d" projectile-dired "project root" :exit t)
   ("s" projectile-ag "ag" :exit t)
   ("f" helm-projectile-find-file "find file" :exit t)
+  ("k" projectile-kill-buffers "kill project buffers" :exit t)
   ("q" nil "quit"))
 
 (defhydra hydra-magit (:color blue :hint nil)
@@ -21,12 +24,12 @@
 (defhydra hydra-window-buffer (:color red :hint nil)
 "
  ^Window^             ^Buffer^           ^Frame^
-^^^^^^^^---------------------------------------------------            (__)
- ^hjkl^: move         _p_: previous      _u_: winner undo            (oo)
- _s_: split below     _n_: next          _r_: winner redo      /------\\/
- _v_: split right     _b_: switch        ^ ^                  / |    ||
- _c_: delete this     _;_: last          ^ ^                 *  /\\---/\\
- _o_: delete other    _K_: kill current  ^ ^                    ~~   ~~
+^^^^^^^^---------------------------------------------------
+ ^hjkl^: move         _p_: previous      _u_: winner undo      ....../ \-.   .
+ _s_: split below     _n_: next          _r_: winner redo   .-/     (    o\.//
+ _v_: split right     _b_: switch        ^ ^                 |  ...  \./\---'
+ _c_: delete this     _;_: last          ^ ^                 |.||  |.||
+ _o_: delete other    _K_: kill current  ^ ^
 ^^^^^^^^
 "
   ("w" revert-all-buffers)
@@ -50,7 +53,7 @@
   ("K" kill-this-buffer)
 
   ("c" delete-window)
-  ("o" delete-other-windows)
+  ("o" delete-other-windows :color blue)
 
   ;; ("H" hydra-move-splitter-left)
   ;; ("J" hydra-move-splitter-down)
