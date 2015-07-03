@@ -84,6 +84,9 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+;; yas-snippet breaks tab completion in the shell
+(add-hook 'term-mode-hook (lambda() (yas-minor-mode -1)))
+
 ;; ===========================================================================
 ;; text editing
 ;; ===========================================================================

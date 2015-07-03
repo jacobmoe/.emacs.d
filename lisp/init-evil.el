@@ -45,6 +45,6 @@
 (add-to-list 'evil-emacs-state-modes 'nav-mode)
 
 ;; key-chords
-(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 
 (provide 'init-evil)

@@ -10,7 +10,7 @@
  ("q" nil "quit"))
 
 (defhydra hydra-projectile (:color blue :hint nil)
-  ("d" projectile-dired "project root" :exit t)
+  ("h" projectile-dired "project root" :exit t)
   ("s" projectile-ag "ag" :exit t)
   ("f" helm-projectile-find-file "find file" :exit t)
   ("k" projectile-kill-buffers "kill project buffers" :exit t)
