@@ -111,7 +111,7 @@
 
 ;; - key-bindings for force-tabbing
 ;; - use spaces, tab-width, tab-stop-list
-;; - major-mode indent levels (MOVE THIS TO LANGUAGES AND FRAMEWORDS)
+;; - major-mode indent levels (MOVE THIS TO LANGUAGES AND FRAMEWORKS)
 ;; - language mode hooks. should also move this to langs and frameworks
 (require 'set-tabbing)
 

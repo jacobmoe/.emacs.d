@@ -8,6 +8,7 @@ ln -s /usr/local/Cellar/emacs/HEAD/Emacs.app /Applications
 - npm install -g [[http://ternjs.net/][tern]]
 ** go-mode
 - go get -u github.com/nsf/gocode
+- go get -u github.com/rogpeppe/godef
 * Packages
 ** misc
 - restclient

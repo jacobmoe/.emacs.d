@@ -1,34 +1,29 @@
 ;; unset C-tab to use tab-to-tab-stop (set in set-tabbing.el)
 ;; default is org-force-cycle-archived
 
+(add-hook 'org-mode-hook
+          (lambda ()
+            ;; set visual line mode
+            (visual-line-mode 1)
 
-(defun set-org-preferences()
-    ;; set visual line mode
-    (visual-line-mode 1)
+            ;; turn off hyperlink wysiwyg feature
+            (setq org-descripive-links nil)
 
-    ;; turn off hyperlink wysiwyg feature
-    (setq org-descripive-links nil)
+            ;; syntax highlight code blocks
+            (setq org-src-fontify-natively t)
 
-    ;; using this binding for tab-to-tab-stop (force a tab)
-    (local-unset-key (kbd "<C-tab>"))
-
-(add-hook 'org-mode-hook 'set-org-preferences)
-
-;; no to wysiwygs! don't hide markup for hyperlinks: [[http:mylink.com][my-link]]
-(setq org-descriptive-links nil)
-
-;; syntax highlight code blocks
-(setq org-src-fontify-natively t)
+            ;; using this binding for tab-to-tab-stop (force a tab)
+            (local-unset-key (kbd "<C-tab>"))))
 
 ;; setting extra org-mode keywords
 (setq org-todo-keywords
-        '((sequence "TODO(t)" "|" "DONE(d)")
-            (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
-            (sequence "RUN(r)" "GYM(g)")
-            (sequence "|" "CANCELED(c)" "STARTED(s)" "NOTE(n)"  "QUESTION(q)")))
+      '((sequence "TODO(t)" "|" "DONE(d)")
+        (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
+        (sequence "RUN(r)" "GYM(g)")
+        (sequence "|" "CANCELED(c)" "STARTED(s)" "NOTE(n)"  "QUESTION(q)")))
 
 (setq org-todo-keyword-faces
-    '(("TODO" . org-warning)
+      '(("TODO" . org-warning)
         ("NOTE" . (:background "orange" :foreground "black"))
         ("CANCELED" . (:foreground "blue" :weight bold))
         ("STARTED" . (:foreground "green"))
@@ -69,6 +64,5 @@
         "* %? \n%i\n")
     ("b" "Book" entry (file+headline (concat org-directory "/gtd/notes.org") "Books")
         "* TODO %?\n %i\n")))
-)
 
 (provide 'init-org-mode)

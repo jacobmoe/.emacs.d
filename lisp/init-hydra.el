@@ -4,10 +4,51 @@
  ("p" hydra-projectile/body "projectile" :exit t)
  ("m" hydra-magit/body "magit" :exit t)
  ("w" hydra-window-buffer/body "window" :exit t)
+ ("o" hydra-orgmode/body "org" :exit t)
+ ("M" hydra-macro/body "macros" :exit t)
  ("x" execute-extended-command "M-x" :exit t)
  ("1" (find-file "~/code/twg/s-trip") "s-trip" :exit t)
  ("2" (find-file "~/code/twg/s-trip/karma-frontend") "karma-frontend" :exit t)
  ("q" nil "quit"))
+
+(defhydra hydra-orgmode (:color red :hint nil)
+"
+ ^Movement^        ^Components^
+^^^^^^^^-----------------------------
+ ^ ^               _t_: table
+ ^ ^               ^ ^
+^^^^^^^^
+"
+  ("t" hydra-orgmode-table/body :color blue)
+  ("q" nil "quit"))
+
+(defhydra hydra-orgmode-table (:color red :hint nil)
+"
+ ^Info^                   ^Formulas^
+^^^^^^^^---------------------------------------------
+ _}_: ref grid (C-c })    _c_: evaluate (C-c C-c)
+ _?_: cell info (C-c ?)   _x_: evaluate all (C-u C-c C-c)
+                          ^'^: open edit (C-c ')
+^^^^^^^^
+"
+  ("}" org-table-toggle-coordinate-overlays)
+  ("?" org-table-field-info)
+  ("c" org-ctrl-c-ctrl-c)
+  ("x" (org-ctrl-c-ctrl-c t))
+  ("'" org-edit-special :color blue)
+  ("q" nil "quit"))
+
+(defhydra hydra-macro (:color blue :hint nil)
+"
+ ^Record^            ^Run^
+^^^^^^^^---------------------------------------------
+ _(_: start C-x (    _e_: execute C-x e
+ _)_: stop C-x )     ^ ^
+^^^^^^^^
+"
+  ("(" kmacro-start-macro)
+  (")" kmacro-end-macro)
+  ("e" kmacro-end-and-call-macro))
 
 (defhydra hydra-projectile (:color blue :hint nil)
   ("h" projectile-dired "project root" :exit t)
@@ -27,12 +68,12 @@
 ^^^^^^^^---------------------------------------------------
  ^hjkl^: move         _p_: previous      _u_: winner undo      ....../ \-.   .
  _s_: split below     _n_: next          _r_: winner redo   .-/     (    o\.//
- _v_: split right     _b_: switch        ^ ^                 |  ...  \./\---'
+ _v_: split right     _b_: switch        _w_: revert all     |  ...  \./\---'
  _c_: delete this     _;_: last          ^ ^                 |.||  |.||
  _o_: delete other    _K_: kill current  ^ ^
 ^^^^^^^^
 "
-  ("w" revert-all-buffers)
+  ("w" revert-all-buffers :color blue)
 
   ("u" winner-undo)
   ("r" winner-redo)

@@ -66,6 +66,6 @@
 
 (add-hook 'go-mode-hook
   (function (lambda ()
-    (setq evil-shift-width go-indent-offset))))
+    (setq evil-shift-width default-indent-level))))
 
 (provide 'set-tabbing)
