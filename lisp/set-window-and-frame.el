@@ -2,17 +2,27 @@
 (winner-mode 1)
 
 ;; line numbers
-(defun jm-set-linum ()
+(defun jm-general-set-linum ()
   ;; show line numbers
   (global-linum-mode 1)
-
   ;; size of linum-mode font
   (set-face-attribute 'linum nil :height 100)
-
   ;; right align linum nums
   (setq linum-format 'dynamic))
 
-(jm-set-linum)
+(jm-general-set-linum)
+
+(defun jm-terminal-set-linum ()
+  ;; add some padding after the line number
+  ;; usually you would (setq linum-format "%d ")
+  ;; but with the linum-format set to dynamic, can't do that
+  ;; the gui has padding by default
+  ;; NOTE: defadvice is deprecated, should use advice-add instead
+  (defadvice linum-update-window (around linum-dynamic activate)
+    (let* ((w (length (number-to-string
+                       (count-lines (point-min) (point-max)))))
+           (linum-format (concat "%" (number-to-string w) "d ")))
+      ad-do-it)))
 
 ;; customization based on whether in gui or terminal
 (defun jm-gui-set-window-frame ()
@@ -24,6 +34,7 @@
   (unless (eq system-type 'darwin) (menu-bar-mode -1)))
 
 (defun jm-terminal-set-window-frame ()
+  (jm-terminal-set-linum)
   (menu-bar-mode -1))
 
 (if (display-graphic-p)
