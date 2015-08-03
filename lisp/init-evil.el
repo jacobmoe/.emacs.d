@@ -20,7 +20,10 @@
 
 (evil-mode 1)
 
+;; setting hydras
 (define-key evil-normal-state-map " " 'hydra-main/body)
+(evil-define-key 'normal org-mode-map " " 'hydra-main-orgmode/body)
+(evil-define-key 'normal dired-mode-map " " 'hydra-main-dired/body)
 
 ;; when long lines are wrapped, j/k navigation jumps the entire
 ;; "real" line instead of the visual line. don't do that.

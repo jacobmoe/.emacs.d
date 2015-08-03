@@ -42,6 +42,28 @@
 (require 'init-whitespace)
 
 ;; ===========================================================================
+;; warnings
+;; ===========================================================================
+
+;; limit when the warning bell dings
+(setq ring-bell-function
+      (lambda ()
+        (unless (memq this-command
+                      '(isearch-abort
+                        abort-recursive-edit
+                        exit-minibuffer
+                        mwheel-scroll
+                        down
+                        up
+                        next-line
+                        previous-line
+                        backward-char
+                        forward-char
+                        evil-backward-char
+                        keyboard-quit))
+          (ding))))
+
+;; ===========================================================================
 ;; window and frame
 ;; ===========================================================================
 
@@ -90,6 +112,10 @@
 ;; ===========================================================================
 ;; text editing
 ;; ===========================================================================
+
+;; use aspell. i don't know why aspell is better than ispell,
+;; but it seems more popular
+(setq ispell-program-name "aspell")
 
 ;; problem: copy some text from outside of emacs. come back to emacs, kill
 ;; some text that you want to replace, and paste. nope - the contents of the

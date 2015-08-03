@@ -1,26 +1,44 @@
 ;; keybindings for hydra-main found in *init-evil* and *init-dired*
 
+;; some major-modes will have a different main hydra,
+;; but there are common "heads".
+;; how to share this default hydra with the others??
 (defhydra hydra-main (:color blue :hint nil)
  ("p" hydra-projectile/body "projectile" :exit t)
  ("m" hydra-magit/body "magit" :exit t)
  ("w" hydra-window-buffer/body "window" :exit t)
- ("o" hydra-orgmode/body "org" :exit t)
  ("M" hydra-macro/body "macros" :exit t)
+ ("s" hydra-shell/body "shell" :exit t)
  ("x" execute-extended-command "M-x" :exit t)
  ("1" (find-file "~/code/twg/s-trip") "s-trip" :exit t)
  ("2" (find-file "~/code/twg/s-trip/karma-frontend") "karma-frontend" :exit t)
  ("q" nil "quit"))
 
-(defhydra hydra-orgmode (:color red :hint nil)
-"
- ^Movement^        ^Components^
-^^^^^^^^-----------------------------
- ^ ^               _t_: table
- ^ ^               ^ ^
-^^^^^^^^
-"
-  ("t" hydra-orgmode-table/body :color blue)
-  ("q" nil "quit"))
+(defhydra hydra-main-dired (:color blue :hint nil)
+ ("r" dired-toggle-read-only "toggle read only (C-x C-q)" :exit t)
+
+ ("p" hydra-projectile/body "projectile" :exit t)
+ ("m" hydra-magit/body "magit" :exit t)
+ ("w" hydra-window-buffer/body "window" :exit t)
+ ("M" hydra-macro/body "macros" :exit t)
+ ("s" hydra-shell/body "shell" :exit t)
+ ("x" execute-extended-command "M-x" :exit t)
+ ("1" (find-file "~/code/twg/s-trip") "s-trip" :exit t)
+ ("2" (find-file "~/code/twg/s-trip/karma-frontend") "karma-frontend" :exit t)
+ ("q" nil "quit"))
+
+(defhydra hydra-main-orgmode (:color blue :hint nil)
+ ("t" hydra-orgmode-table/body "table" :color blue)
+
+ ("p" hydra-projectile/body "projectile" :exit t)
+ ("m" hydra-magit/body "magit" :exit t)
+ ("w" hydra-window-buffer/body "window" :exit t)
+ ("M" hydra-macro/body "macros" :exit t)
+ ("s" hydra-shell/body "shell" :exit t)
+ ("x" execute-extended-command "M-x" :exit t)
+ ("1" (find-file "~/code/twg/s-trip") "s-trip" :exit t)
+ ("2" (find-file "~/code/twg/s-trip/karma-frontend") "karma-frontend" :exit t)
+ ("q" nil "quit"))
 
 (defhydra hydra-orgmode-table (:color red :hint nil)
 "
@@ -50,6 +68,13 @@
   (")" kmacro-end-macro)
   ("e" kmacro-end-and-call-macro))
 
+(defhydra hydra-shell (:color blue :hint nil)
+  ("i" ielm "ielm (elisp repl)" :exit t)
+  ("t" ansi-term "ansi-term" :exit t)
+  ("e" magit-blame "eshell" :exit t)
+  ("s" shell "shell" :exit t)
+  ("q" nil "quit"))
+
 (defhydra hydra-projectile (:color blue :hint nil)
   ("h" projectile-dired "project root" :exit t)
   ("s" projectile-ag "ag" :exit t)
@@ -59,7 +84,9 @@
 
 (defhydra hydra-magit (:color blue :hint nil)
   ("s" magit-status "status" :exit t)
-  ("b" magit-blame-mode "blame mode" :exit t)
+  ("b" magit-blame "blame mode" :exit t)
+  ("v" magit-blame-mode "blame mode toggle" :exit t)
+  ("f" magit-log-buffer-file "log current file" :exit t)
   ("q" nil "quit"))
 
 (defhydra hydra-window-buffer (:color red :hint nil)

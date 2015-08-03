@@ -16,7 +16,7 @@
   (dired-subtree-insert)
   (revert-buffer))
 
-(define-key dired-mode-map " " 'hydra-main/body)
+(define-key dired-mode-map " " 'hydra-main-dired/body)
 
 (define-key dired-mode-map (kbd "<tab>") 'dired-subtree-insert-and-revert-buffer)
 (define-key dired-mode-map (kbd "q") 'dired-subtree-remove)

@@ -11,17 +11,19 @@
 (defun js-mode-handler ()
     (flycheck-mode)
 
-    ;; we're using eslint now, so turn off jshint
+    ;; we're using standard now, so turn off jshint
     (setq-default flycheck-disabled-checkers
-    (append flycheck-disabled-checkers
-        '(javascript-jshint)))
+                  (append flycheck-disabled-checkers
+                          '(javascript-jshint)
+                          '(javascript-eslint)))
 
     ;; use flycheck for js-mode
     ;; (setq flycheck-jshintrc ".jshintrc")
-    (setq flycheck-eslintrc ".eslintrc")
+    ;; (setq flycheck-eslintrc ".eslintrc")
 
     ;; use eslint with flycheck
-    (flycheck-add-mode 'javascript-eslint 'js2-mode)
+    ;; (flycheck-add-mode 'javascript-eslint 'js2-mode)
+    (flycheck-add-mode 'javascript-standard 'js2-mode)
 
     (local-set-key (kbd "C-c C-.") 'tern-find-definition)
     (local-set-key (kbd "C-c C-,") 'tern-pop-find-definition))

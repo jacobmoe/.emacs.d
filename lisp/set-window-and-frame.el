@@ -1,24 +1,34 @@
 ;; save window arrangement states in a ring
 (winner-mode 1)
 
+;; line numbers
+(defun jm-set-linum ()
+  ;; show line numbers
+  (global-linum-mode 1)
+
+  ;; size of linum-mode font
+  (set-face-attribute 'linum nil :height 100)
+
+  ;; right align linum nums
+  (setq linum-format 'dynamic))
+
+(jm-set-linum)
+
+;; customization based on whether in gui or terminal
+(defun jm-gui-set-window-frame ()
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+
+  ;; remove menu-bar form GUI unless we're on OS X
+  ;; the GUI on linux takes up space in the frame.
+  (unless (eq system-type 'darwin) (menu-bar-mode -1)))
+
+(defun jm-terminal-set-window-frame ()
+  (menu-bar-mode -1))
+
 (if (display-graphic-p)
-
-    ;; remove these if in GUI
-    (progn
-      (tool-bar-mode -1)
-      (scroll-bar-mode -1)
-        ;; remove menu-bar form GUI unless we're on OS X
-        ;; the GUI on linux takes up space in the frame.
-      (unless (eq system-type 'darwin) (menu-bar-mode -1)))
-
-    ;; if not in GUI
-    (menu-bar-mode -1))
-
-;; show line numbers. seems to cause problems in the terminal
-(global-linum-mode 1)
-
-;; size of linum-mode font
-(set-face-attribute 'linum nil :height 100)
+    (jm-gui-set-window-frame)
+  (jm-terminal-set-window-frame))
 
 ;; highlight current line
 (global-hl-line-mode 1)
