@@ -79,7 +79,7 @@
 ;; buffers, files and directories
 ;; ===========================================================================
 
-;; default C-x C-b is list-buffers. buffer-menu is better
+;; default C-x C-b is list-buffers. buffer-menu is similar but better
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 
 ;; - key-binding for revert-all-buffers

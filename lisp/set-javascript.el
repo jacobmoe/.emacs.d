@@ -8,27 +8,33 @@
 (setq-default js2-strict-missing-semi-warning nil)
 (setq-default js2-basic-offset 2)
 
-(defun js-mode-handler ()
+(defun jm-js-mode-handler ()
     (flycheck-mode)
 
-    ;; we're using standard now, so turn off jshint
+    ;; using standard now, so turn off jshint and eslint
+    ;; do i really need to do this?
+    ;; (setq-default flycheck-disabled-checkers
+    ;;               (append flycheck-disabled-checkers
+    ;;                       '(javascript-jshint)
+    ;;                       '(javascript-eslint)))
+
     (setq-default flycheck-disabled-checkers
                   (append flycheck-disabled-checkers
-                          '(javascript-jshint)
-                          '(javascript-eslint)))
+                          '(javascript-jshint)))
 
-    ;; use flycheck for js-mode
+    ;; use rc file
     ;; (setq flycheck-jshintrc ".jshintrc")
-    ;; (setq flycheck-eslintrc ".eslintrc")
+    (setq flycheck-eslintrc ".eslintrc")
 
-    ;; use eslint with flycheck
-    ;; (flycheck-add-mode 'javascript-eslint 'js2-mode)
-    (flycheck-add-mode 'javascript-standard 'js2-mode)
+    ;; choose flycheck backend
+    (flycheck-add-mode 'javascript-eslint 'js2-mode)
+    ;; (flycheck-add-mode 'javascript-standard 'js2-mode)
 
+    ;; tern bindings
     (local-set-key (kbd "C-c C-.") 'tern-find-definition)
     (local-set-key (kbd "C-c C-,") 'tern-pop-find-definition))
 
-(add-hook 'js-mode-hook 'js-mode-handler)
-(add-hook 'js2-mode-hook 'js-mode-handler)
+(add-hook 'js-mode-hook 'jm-js-mode-handler)
+(add-hook 'js2-mode-hook 'jm-js-mode-handler)
 
 (provide 'set-javascript)
