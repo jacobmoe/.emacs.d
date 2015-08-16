@@ -8,10 +8,10 @@ ln -s /usr/local/Cellar/emacs/HEAD/Emacs.app /Applications
 ** js2-mode
 #+BEGIN_SRC bash
 
-npm install -g [[http://eslint.org/][eslint]]
-npm install -g [[https://www.npmjs.com/package/eslint-plugin-react][eslint-plugin-react]]
-npm install -g [[https://www.npmjs.com/package/standard][standard]]
-npm install -g [[http://ternjs.net/][tern]]
+npm install -g eslint
+npm install -g eslint-plugin-react
+npm install -g standard
+npm install -g tern
 
 #+END_SRC
 ** go-mode
