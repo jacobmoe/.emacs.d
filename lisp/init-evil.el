@@ -26,6 +26,7 @@
 (evil-define-key 'normal dired-mode-map " " 'hydra-main-dired/body)
 (evil-define-key 'normal js-mode-map " " 'hydra-main-js/body)
 (evil-define-key 'normal js2-mode-map " " 'hydra-main-js/body)
+(evil-define-key 'normal go-mode-map " " 'hydra-main-golang/body)
 
 ;; when long lines are wrapped, j/k navigation jumps the entire
 ;; "real" line instead of the visual line. don't do that.

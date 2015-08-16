@@ -6,12 +6,21 @@ ln -s /usr/local/Cellar/emacs/HEAD/Emacs.app /Applications
 #+END_SRC
 * Dependencies
 ** js2-mode
-- npm install -g [[http://eslint.org/][eslint]]
-- npm install -g [[http://ternjs.net/][tern]]
-- npm install -g [[https://www.npmjs.com/package/standard][standard]]
+#+BEGIN_SRC bash
+
+npm install -g [[http://eslint.org/][eslint]]
+npm install -g [[https://www.npmjs.com/package/eslint-plugin-react][eslint-plugin-react]]
+npm install -g [[https://www.npmjs.com/package/standard][standard]]
+npm install -g [[http://ternjs.net/][tern]]
+
+#+END_SRC
 ** go-mode
-- go get -u github.com/nsf/gocode
-- go get -u github.com/rogpeppe/godef
+#+BEGIN_SRC bash
+
+go get -u github.com/nsf/gocode
+go get -u github.com/rogpeppe/godef
+
+#+END_SRC
 ** flyspell-mode
 - brew install aspell
 * Packages
