@@ -22,7 +22,11 @@ go get -u github.com/rogpeppe/godef
 
 #+END_SRC
 ** flyspell-mode
-- brew install aspell
+#+BEGIN_SRC bash
+
+brew install aspell
+
+#+END_SRC
 * Packages
 ** misc
 - restclient

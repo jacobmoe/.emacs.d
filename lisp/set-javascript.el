@@ -11,7 +11,7 @@
 (defun jm-js-mode-handler ()
     (flycheck-mode)
 
-    ;; using standard now, so turn off jshint and eslint
+    ;; when using standard, turn off jshint and eslint
     ;; do i really need to do this?
     ;; (setq-default flycheck-disabled-checkers
     ;;               (append flycheck-disabled-checkers

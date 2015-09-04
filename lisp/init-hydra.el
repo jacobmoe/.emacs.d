@@ -17,6 +17,7 @@
 
 (defhydra hydra-main-dired (:color blue :hint nil)
  ("r" dired-toggle-read-only "toggle read only (C-x C-q)" :exit t)
+ ("Q" dired-do-query-replace-regexp "query replace regexp (Q)" :exit t)
 
  ("p" hydra-projectile/body "projectile" :exit t)
  ("m" hydra-magit/body "magit" :exit t)
